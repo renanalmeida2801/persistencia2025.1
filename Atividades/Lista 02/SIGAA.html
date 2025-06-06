@@ -1,0 +1,531 @@
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+<html class="background" lang="pt-BR">
+
+<head>
+	<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+
+<title>SIGAA - UFC</title>
+
+<link rel="shortcut icon" href="/shared/img/brasao.ico" />
+
+<script type="text/javascript" src="/shared/jsBundles/jawr_loader.js"></script>
+<script type="text/javascript">
+	JAWR.loader.style('/bundles/css/sigaa_base.css', 'all');
+	JAWR.loader.style('/css/ufrn_print.css', 'print');
+	
+	JAWR.loader.script('/bundles/js/sigaa_base.js');
+</script>
+
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_1256847914/bundles/css/sigaa.css" />
+
+
+<script type="text/javascript">
+   	JAWR.loader.script('/javascript/jquery-1.7.1.min.js');
+   	JAWR.loader.script('/javascript/jquery/jquery.cookie.js');
+</script>
+
+<script type="text/javascript">
+   	var j$=jQuery.noConflict();
+</script>
+
+<link rel="stylesheet" href="/shared/acessibilidade/bootstrap-acessibilidade.css"></link>
+
+<script type="text/javascript" src="/shared/acessibilidade/accessible_jscookmenu.js" ></script>
+
+<script type="text/javascript" src='/shared/acessibilidade/ferramentas_acessibilidade.js' ></script>
+
+<script type="text/javascript" src="/shared/acessibilidade/accessible_extjs_basic_dialog.js"></script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	var mensagem;
+	var initMensagem = function() {
+		mensagem = new Mensagem();
+	}
+	YAHOO.util.Event.addListener(window,'load', initMensagem);
+</script>
+<!-- Fim dos imports para abrir chamado -->
+
+<link rel="stylesheet" href="/sigaa/css/html5/correcoes.css" type="text/css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_530109038/css/html5/bootstrap-form.css" />
+
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_1578515502/css/html5/bootstrap-acessibilidade.css" />
+
+
+
+<link rel="stylesheet" href="/sigaa/css/html5/flexboxgrid.css" type="text/css" />
+
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_N242246130/css/html5/html5-main.css" />
+
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_121451417/css/html5/html5-lista.css" />
+
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_N1404962710/css/html5/html5-form.css" />
+
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_N1624543208/css/html5/html5-detalhes.css" />
+
+
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_N603275713/css/html5/html5-botoes.css" />
+
+
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_688604679/css/tags/sigaa-tags.css" />
+
+
+
+</head>
+
+<body>
+	
+
+	
+		<div id="container">
+			
+			
+<style>
+	#menu-acessibilidade{
+		width: 0px !important;
+		height: 0px !important;
+		padding: 0 !important;
+		overflow: hidden !important;
+		clip: rect(0,0,0,0) !important;
+		white-space: nowrap !important;
+		border: 0 !important;
+	}
+	#menu-acessibilidade a{
+		background-color: #fff;
+		border-radius: 0 2px 2px 0;
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08);
+		display: flex;
+		z-index: 1001;
+		border: 2px solid rgba(0,0,0,.16);
+		cursor: pointer;
+		font-size: 13px;
+		line-height: 20px;
+		margin: 6px 11px;
+		min-height: 32px;
+		text-decoration: underline;
+		text-align: center;
+		width: 128px;
+		white-space: normal;
+	}
+	#menu-acessibilidade a:focus{
+		position: fixed;
+		top: 0;
+		left: 0;
+		clip: auto;
+		overflow: visible;
+	}
+</style>
+<div id="menu-acessibilidade" >
+	<h2 id="titulo-menu-acessibilidade">Atalhos de Acessibilidade</h2>
+	<a accesskey="1" id="link-skipto-menu" href="#menu-dropdown" class="link-acessibilidade" aria-hidden="true" tabindex="-1">Pular para Menu de Navegação </a>
+	<a accesskey="2" id="link-skipto-conteudo" href="#conteudo" class="link-acessibilidade">Pular para Início do Conteúdo</a>
+	<a accesskey="3" id="link-skipto-rodape" href="#rodape" class="link-acessibilidade">Pular para Rodapé</a>
+	<script>
+		j$(function(){
+			let menu=document.getElementById('menu-dropdown');
+			if(menu){
+				j$('#link-skipto-menu').attr('aria-hidden','false').attr('tabindex','0');
+			}
+		});
+	</script>
+</div>
+<header id="cabecalho" role="banner">
+
+
+	
+	
+
+	<div id="info-sistema">
+		<span role="paragraph">
+			<h1 role="none">
+				UFC - SIGAA -
+			</h1>
+			<h3 role="none">Sistema Integrado de Gestão de Atividades Acadêmicas</h3>
+		</span>
+
+		
+	</div>
+
+	
+
+
+	
+
+
+
+	<div id="painel-usuario"
+		 style="height: 20px;" 
+	>
+
+		
+
+		
+	</div>
+</header>
+			
+			<script>
+				j$(function(){
+					let main=j$('main,[role="main"]').not('#conteudo,[role="none"]').first();
+					if(main.length){
+						j$('#conteudo').attr('role','none');
+						if(!main.attr('id')) main.attr('id','conteudoPrincipal');
+						let id_conteudo=main.attr('id');
+						j$('#link-skipto-conteudo').attr('href','#'+id_conteudo);
+					}
+					else{
+						let menu=j$('#menu-dropdown');
+						if(menu.length){
+							main = menu.next();
+							if(!main.attr('id')) main.attr('id','conteudoPrincipal');
+							let id_conteudo=main.attr('id');
+							j$('#link-skipto-conteudo').attr('href','#'+id_conteudo);
+						}
+					}
+				})
+			</script>
+			<main id="conteudo">
+				
+	
+
+	
+
+
+
+
+
+	
+		
+	
+
+	<script type="text/javascript">
+		j$(document).ready(function(){
+			j$.cookie('sistema', null);
+		});
+	
+		function setarCookie(){
+			j$.cookie('sistema', null);
+			j$.cookie('sistema', 'sigaa', { path: '/' });
+		}
+
+		function abrirDivDetalhes(div, width, height) {
+			dialog = YAHOO.ext.DialogManager.get(div);
+			$(div).style.display='block';
+			$(div).style.backgroundColor = '#FFFFFF';
+			if(!width) width = 600;
+			if(!height) height = 400;
+			if ( !dialog ) {
+				dialog = new YAHOO.ext.BasicDialog(div, {
+				        modal: false,
+				        width: width,
+				        height: height,
+				        constraintoviewport: false,
+				        fixedcenter: true,
+				        shadow: false,
+				        minWidth:600,
+				        minHeight:0,
+				        proxyDrag: true
+				});
+				dialog.addKeyListener(27, dialog.hide, dialog);
+				dialog.addButton('Fechar Painel', dialog.hide, dialog);
+			}
+			dialog.show();
+			YAHOO.ext.DialogManager.bringToFront(div);
+		}
+
+
+		function desabilitar_link(event) {
+			tornar_link_desabilitado(event.element());
+		}
+
+		function tornar_link_desabilitado(elemento) {
+			console.log(elemento)
+			elemento.setAttribute('onclick', 'return false;');
+			elemento.classList.add("disabled")
+		}
+		function desabilitar_elemento_pai(event) {
+			tornar_link_desabilitado(event.element().parentElement);
+		}
+		
+	</script>
+
+	
+	
+	
+
+ 
+
+
+
+
+
+<style type="text/css">
+.painel {  background-color: #EFF3FA; padding: 5px; width: 16%; text-align: center; }
+.sistemaAtual { background-color: white; border: 1px; border-top: 1px solid darkblue; border-left: 1px solid darkblue; border-right: 1px solid darkblue; } 
+</style>
+
+
+
+	<div align="center" style="margin: 0 auto; background: #EFF3FA; padding: 10px;">
+		<p style="font-weight: bold; color: #F00;">ATENÇÃO!</p>
+		<p style="width: 75%;">	O sistema diferencia letras maiúsculas de minúsculas APENAS na senha,
+		portanto ela deve ser digitada da mesma maneira que no cadastro.</p>
+	</div>
+
+
+<div align="center" style="width: 100%; margin: 0 auto; padding: 10px 0; padding-bottom: 0px;">
+<table width="100%" align="center" style="border-collapse: separate; border-spacing: 3px 0px; " >
+	<tr>
+		
+		<td class="painel sistemaAtual" >
+			<a href="http://www.si3.ufc.br/sigaa/">
+			SIGAA</a> <br> 
+			<span style="font-size: 10px;">(Acadêmico)</span>
+		</td>
+		
+		
+		<td class="painel " >
+			<a href="http://www.si3.ufc.br/sipac/">
+			SIPAC</a><br>
+			<span style="font-size: 10px;">(Administrativo)</span>
+		</td>
+		
+		
+		<td class="painel " >
+			<a href="http://www.si3.ufc.br/sigrh/">
+			SIGPRH</a><br>
+			<span style="font-size: 10px;">(Recursos Humanos)</span>
+		</td>
+		
+		
+		
+		
+		<td class="painel " >
+			<a href="http://www.si3.ufc.br/admin/">
+			SIGADMIN</a><br>
+			<span style="font-size: 10px;">(Administração e Comunicação)</span>
+		</td>
+		
+		<td class="painel" ">
+			<a href="http://www.si3.ufc.br/sigrh/public/biblioteca_universitaria.jsf">
+			Biblioteca Universitária</a><br>
+			<span style="font-size: 10px;">(Serviços On-line)</span>
+		</td>
+	</tr>
+</table>
+</div>
+
+<hr style="margin-left:3px; margin-top:0px; width:1px; height:1px; color:darkblue; "/>
+<hr style="margin-left:195px; margin-top:-7px; width:785px; height:1px; color:darkblue; "/>	
+	
+<table style="margin-left:3px; margin-top:-6px; width:978px; border-collapse:separate; border-spacing:30px; border-left:1px solid darkblue; border-right:1px solid darkblue; border-bottom:1px solid darkblue;">
+	<tr>
+		<td>
+			
+				
+						
+				
+			<p align="center">
+				Perdeu o e-mail de confirmação de cadastro? <a href="/admin/public/recuperar_codigo.jsf">Clique aqui para recuperá-lo.</a><br>
+				Esqueceu o login? <a href="/admin/public/recuperar_login.jsf">Clique aqui para recuperá-lo.</a><br>
+				Esqueceu a senha? <a href="/admin/public/recuperar_senha.jsf">Clique aqui para recuperá-la.</a>
+			</p>
+			<br>				
+				
+								
+				<center style="color: #922; font-weight: bold;"></center>
+				<br>
+							
+				
+			<div class="logon" style="width:50%; margin: 0 auto;">
+				<h3>Entrar no Sistema</h3>
+				<form name="loginForm" method="post" action="/sigaa/logar.do?dispatch=logOn">
+					<input type="hidden" name="width" value="0" id="width">
+					<input type="hidden" name="height" value="0" id="height">
+					<input type="hidden" name="urlRedirect" value="" />
+					<input type="hidden" name="acao" value="" />
+				
+					<script>
+						document.getElementById('width').value = screen.width;
+						document.getElementById('height').value = screen.height;
+					</script>
+				
+					<table style="width:457px; border-collapse: separate; border-spacing: 3px;">
+						<tbody>
+							<tr>						
+								<th width="35%">Usuário:</th>
+								<td><input type="text" name="user.login" size="20" value=""></td>
+							</tr>
+								
+							<tr>
+								<th>Senha:</th>
+								<td><input type="password" name="user.senha" size="20" value=""></td>
+							</tr>
+						</tbody>
+				
+						<tfoot>
+							<tr>
+								<td colspan="2" align="center" width="30%"><input type="submit" name="entrar" value="Entrar" style="padding:9px; padding-top:1px; padding-bottom:1px"></td>
+							</tr>
+						</tfoot>
+					</table>
+				</form>
+<script type="text/javascript" language="JavaScript">
+  <!--
+  var focusControl = document.forms["loginForm"].elements["user.login"];
+
+  if (focusControl.type != "hidden" && !focusControl.disabled) {
+     focusControl.focus();
+  }
+  // -->
+</script>
+				
+			</div>
+			<br>
+			<br>
+				
+			<table style="width:100%">
+				<tr>
+					<td colspan="5" align="center" width="33%">
+						<b>Servidor,</b><br>
+						caso ainda não possua cadastro no SIGAA,<br>clique no link abaixo.<br>
+						<a href="http://www.si3.ufc.br/admin/auto_cadastro/form.jsf?origem=2">
+						<img src="/sigaa/img/novo_usuario.gif" height="16">
+						<br>Cadastre-se</a>
+					</td>
+					
+					<td colspan="5" align="center" width="33%">
+						<b>Aluno,</b><br>caso ainda não possua cadastro no SIGAA, <br>clique no link abaixo.<br>
+						<a href="/sigaa/public/cadastro/discente.jsf"><img src="/sigaa/img/user.png" alt="Novo Usuário">
+						<br>Cadastre-se</a>
+					</td>
+					
+					<td colspan="5" align="center" width="33%">
+						<b>Familiares,</b><br>caso ainda não possuam cadastro no SIGAA, <br>clique no link abaixo.<br>
+						<a href="/sigaa/public/cadastro/familiares.jsf"><img src="/sigaa/img/familiares.png" alt="Novo Usuário">
+						<br>Cadastre-se</a>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<br>
+			
+			<table align="center" bordercolor="red">
+				<tr>
+					<td colspan="2" style="text-align: center;font-size: 15px;text-decoration: underline;">
+						<b><a href="https://drive.google.com/open?id=118Rz-wwBL0VWHlgIhpfl9FdMpeT3pNjS" target="_blank">Clique aqui para acessar os tutoriais do SIGAA</a></b>
+					</td>
+				</tr>
+			</table>
+			<table align="center">
+				<tr>
+					<td><a href="http://get.adobe.com/br/reader/" target="_blank"><img src="/sigaa/img/adobe.jpg" height="20" width="20" border="0"></a></td>
+					<td>
+						<b>Para visualizar documentos é necessário utilizar o <a href="http://get.adobe.com/br/reader/" target="_blank">Adobe Reader</a>,
+						para baixá-lo e instalá-lo, <a href="http://get.adobe.com/br/reader/" target="_blank">clique aqui</a></b>.
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+			
+		</main> 
+		<br />
+
+		
+		<footer id="rodape" role="contentinfo">
+			<p>
+				SIGAA |
+				Copyright &copy; 2010-2025 
+			  - Superintendência de Tecnologia da Informação
+			  - UFC
+			  - <span itemprop="telephone">(85) 3366-9999</span>
+			  - si3asprd03.ufc.br
+			</p>
+		</footer>
+	
+	</div>  
+	<div id="painel-mensagem-envio"> </div>
+
+
+
+
+<script type="text/javascript">
+	Relogio.init(90);
+</script>
+
+	<div id="mensagem">
+		<div class="x-window-header"></div>
+		<div class="x-window-body"></div>
+	</div>
+
+	
+	<div vw class="enabled">
+	    <div vw-access-button class="active"></div>
+	    <div vw-plugin-wrapper>
+	      <div class="vw-plugin-top-wrapper"></div>
+	    </div>
+	</div>
+	<script src="https://vlibras.gov.br/app/vlibras-plugin.js" charset="UTF-8"></script>
+	<script>
+		new window.VLibras.Widget('https://vlibras.gov.br/app');
+	</script>
+
+	</body>
+</html>

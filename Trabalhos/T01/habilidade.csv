@@ -1,0 +1,6 @@
+id,nome,descricao,custo_mana,nivel_requerido
+1,Clone das Sombras,Cria vários clones de si mesmo.,5,8
+2,Invocação de Espiritos,Invoca espiritos para ajudar na batalha,10,8
+3,Canção de cura,Cura todos os aliados que estiverem no alcance da música,8,4
+4,Prever futuro,Consegue visualizar alguns segundos do futuro.,15,10
+5,Haki do Conquistador,Derruba os inimigos apenas com sua determinação

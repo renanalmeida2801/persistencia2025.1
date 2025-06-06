@@ -1,0 +1,242 @@
+2025-05-07 09:26:09,474 - INFO - [CHAMADA] POST /personagem | args=() | kwargs={'personagem': Personagem(id=1, nome='Luffy', classe='Pirata', nivel=10, pontos_vida=300)}
+2025-05-07 09:27:16,559 - INFO - [CHAMADA] POST /personagem | args=() | kwargs={'personagem': Personagem(id=5, nome='Joaozinho', classe='Guerreiro', nivel=5, pontos_vida=40)}
+2025-05-07 09:27:16,561 - INFO - [RESPOSTA] POST /personagem | retorno=id=5 nome='Joaozinho' classe='Guerreiro' nivel=5 pontos_vida=40
+2025-05-07 09:27:42,265 - INFO - [CHAMADA] GET /personagem/quantidade | args=() | kwargs={}
+2025-05-07 09:27:42,266 - INFO - [RESPOSTA] GET /personagem/quantidade | retorno={'quantidade:': 3}
+2025-05-07 09:30:09,115 - INFO - [CHAMADA] GET /personagem | args=() | kwargs={}
+2025-05-07 09:30:09,116 - INFO - [RESPOSTA] GET /personagem | retorno=[Personagem(id=0, nome='Naruto Uzumaki', classe='Ninja', nivel=3, pontos_vida=15), Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=150), Personagem(id=5, nome='Joaozinho', classe='Guerreiro', nivel=5, pontos_vida=40)]
+2025-05-07 09:31:33,422 - INFO - [CHAMADA] POST /equipamento | args=() | kwargs={'equipamento': Equipamento(id=1, nome='Murakomogiri', tipo='Naginata', ataque=10, defesa=0)}
+2025-05-07 09:31:33,425 - INFO - [RESPOSTA] POST /equipamento | retorno=id=1 nome='Murakomogiri' tipo='Naginata' ataque=10 defesa=0
+2025-05-07 09:31:43,103 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-07 09:31:43,103 - INFO - [RESPOSTA] GET /habilidade | retorno=[]
+2025-05-07 09:31:45,685 - INFO - [CHAMADA] GET /equipamento | args=() | kwargs={}
+2025-05-07 09:31:45,705 - INFO - [RESPOSTA] GET /equipamento | retorno=[Equipamento(id=1, nome='Murakomogiri', tipo='Naginata', ataque=10, defesa=0)]
+2025-05-07 09:31:52,531 - INFO - [CHAMADA] GET /personagem/zip | args=() | kwargs={}
+2025-05-07 09:31:52,619 - INFO - [RESPOSTA] GET /personagem/zip | retorno=<starlette.responses.FileResponse object at 0x0000024CBCEB0590>
+2025-05-07 09:31:58,274 - INFO - [CHAMADA] GET /personagem/hash | args=() | kwargs={}
+2025-05-07 09:31:58,274 - INFO - [RESPOSTA] GET /personagem/hash | retorno={'hash_sha256': '8f17e7450fe394356844a8f69c9e7e146dfa5803cd3e1dc5d2d94666ca196400'}
+2025-05-07 09:32:06,916 - INFO - [CHAMADA] GET /personagem/xml | args=() | kwargs={}
+2025-05-07 09:32:06,917 - INFO - [RESPOSTA] GET /personagem/xml | retorno=<starlette.responses.FileResponse object at 0x0000024CBBE3EE90>
+2025-05-07 09:34:44,250 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'Pirata', 'nivel': None}
+2025-05-07 09:34:44,252 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=150)]
+2025-05-13 13:10:04,328 - INFO - [CHAMADA] GET /personagem | args=() | kwargs={}
+2025-05-13 13:10:04,331 - INFO - [RESPOSTA] GET /personagem | retorno=[Personagem(id=0, nome='Naruto Uzumaki', classe='Ninja', nivel=3, pontos_vida=15), Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=150), Personagem(id=5, nome='Joaozinho', classe='Guerreiro', nivel=5, pontos_vida=40)]
+2025-05-13 13:10:55,508 - INFO - [CHAMADA] POST /personagem | args=() | kwargs={'personagem': Personagem(id=2, nome='Alucard', classe='Vampiro', nivel=3, pontos_vida=25)}
+2025-05-13 13:10:55,511 - INFO - [RESPOSTA] POST /personagem | retorno=id=2 nome='Alucard' classe='Vampiro' nivel=3 pontos_vida=25
+2025-05-13 13:11:04,550 - INFO - [CHAMADA] GET /personagem | args=() | kwargs={}
+2025-05-13 13:11:04,578 - INFO - [RESPOSTA] GET /personagem | retorno=[Personagem(id=0, nome='Naruto Uzumaki', classe='Ninja', nivel=3, pontos_vida=15), Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=150), Personagem(id=5, nome='Joaozinho', classe='Guerreiro', nivel=5, pontos_vida=40), Personagem(id=2, nome='Alucard', classe='Vampiro', nivel=3, pontos_vida=25)]
+2025-05-13 13:11:47,820 - INFO - [CHAMADA] PUT /personagem | args=() | kwargs={'personagem_id': 2, 'atualizado': Personagem(id=2, nome='Dracula', classe='Vampiro Editado', nivel=10, pontos_vida=100)}
+2025-05-13 13:11:47,824 - INFO - [RESPOSTA] PUT /personagem | retorno=id=2 nome='Dracula' classe='Vampiro Editado' nivel=10 pontos_vida=100
+2025-05-13 13:11:57,645 - INFO - [CHAMADA] GET /personagem | args=() | kwargs={}
+2025-05-13 13:11:57,674 - INFO - [RESPOSTA] GET /personagem | retorno=[Personagem(id=0, nome='Naruto Uzumaki', classe='Ninja', nivel=3, pontos_vida=15), Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=150), Personagem(id=5, nome='Joaozinho', classe='Guerreiro', nivel=5, pontos_vida=40), Personagem(id=2, nome='Dracula', classe='Vampiro Editado', nivel=10, pontos_vida=100)]
+2025-05-13 13:12:16,877 - INFO - [CHAMADA] DELETE /personagem | args=() | kwargs={'personagem_id': 5}
+2025-05-13 13:12:16,879 - INFO - [RESPOSTA] DELETE /personagem | retorno={'mensagem': 'Personagem removido com sucesso'}
+2025-05-13 13:12:22,718 - INFO - [CHAMADA] GET /personagem | args=() | kwargs={}
+2025-05-13 13:12:22,742 - INFO - [RESPOSTA] GET /personagem | retorno=[Personagem(id=0, nome='Naruto Uzumaki', classe='Ninja', nivel=3, pontos_vida=15), Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=150), Personagem(id=2, nome='Dracula', classe='Vampiro Editado', nivel=10, pontos_vida=100)]
+2025-05-13 13:16:12,532 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-13 13:16:12,533 - INFO - [RESPOSTA] GET /habilidade | retorno=[]
+2025-05-13 13:16:43,133 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-13 13:16:43,134 - INFO - [RESPOSTA] GET /habilidade | retorno=[]
+2025-05-13 13:17:24,803 - INFO - [CHAMADA] POST /habilidade | args=() | kwargs={'habilidade': Habilidade(id=1, nome='Bola de Fogo', descricao='Usuário dispara uma grande bola de fogo', custo_mana=4, nivel_requerido=2)}
+2025-05-13 13:17:24,806 - INFO - [RESPOSTA] POST /habilidade | retorno=id=1 nome='Bola de Fogo' descricao='Usuário dispara uma grande bola de fogo' custo_mana=4 nivel_requerido=2
+2025-05-13 13:17:35,755 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-13 13:17:35,783 - INFO - [RESPOSTA] GET /habilidade | retorno=[Habilidade(id=1, nome='Bola de Fogo', descricao='Usuário dispara uma grande bola de fogo', custo_mana=4, nivel_requerido=2)]
+2025-05-13 13:18:10,696 - INFO - [CHAMADA] POST /habilidade | args=() | kwargs={'habilidade': Habilidade(id=2, nome='Passos furtivos', descricao='O usuário se move de forma discreta e furtiva', custo_mana=2, nivel_requerido=1)}
+2025-05-13 13:18:10,698 - INFO - [RESPOSTA] POST /habilidade | retorno=id=2 nome='Passos furtivos' descricao='O usuário se move de forma discreta e furtiva' custo_mana=2 nivel_requerido=1
+2025-05-13 13:19:01,948 - INFO - [CHAMADA] POST /habilidade | args=() | kwargs={'habilidade': Habilidade(id=2, nome='Haki do Rei', descricao='O usuário deixa os inimigos inconscientes apenas com a força de sua determinação', custo_mana=100, nivel_requerido=10)}
+2025-05-13 13:19:12,559 - INFO - [CHAMADA] POST /habilidade | args=() | kwargs={'habilidade': Habilidade(id=3, nome='Haki do Rei', descricao='O usuário deixa os inimigos inconscientes apenas com a força de sua determinação', custo_mana=100, nivel_requerido=10)}
+2025-05-13 13:19:12,562 - INFO - [RESPOSTA] POST /habilidade | retorno=id=3 nome='Haki do Rei' descricao='O usuário deixa os inimigos inconscientes apenas com a força de sua determinação' custo_mana=100 nivel_requerido=10
+2025-05-13 13:19:16,882 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-13 13:19:16,884 - INFO - [RESPOSTA] GET /habilidade | retorno=[Habilidade(id=1, nome='Bola de Fogo', descricao='Usuário dispara uma grande bola de fogo', custo_mana=4, nivel_requerido=2), Habilidade(id=2, nome='Passos furtivos', descricao='O usuário se move de forma discreta e furtiva', custo_mana=2, nivel_requerido=1), Habilidade(id=3, nome='Haki do Rei', descricao='O usuário deixa os inimigos inconscientes apenas com a força de sua determinação', custo_mana=100, nivel_requerido=10)]
+2025-05-13 13:21:25,415 - INFO - [CHAMADA] PUT /habilidade | args=() | kwargs={'habilidade_id': 1, 'atualizado': Habilidade(id=1, nome='Rasengan', descricao='Usuário concentra uma grande fonte de energia na mão acertando o inimigo.', custo_mana=4, nivel_requerido=4)}
+2025-05-13 13:21:25,419 - INFO - [RESPOSTA] PUT /habilidade | retorno=id=1 nome='Rasengan' descricao='Usuário concentra uma grande fonte de energia na mão acertando o inimigo.' custo_mana=4 nivel_requerido=4
+2025-05-13 13:21:57,767 - INFO - [CHAMADA] POST /habilidade | args=() | kwargs={'habilidade': Habilidade(id=5, nome='Habilidade teste', descricao='testando', custo_mana=10, nivel_requerido=1)}
+2025-05-13 13:21:57,770 - INFO - [RESPOSTA] POST /habilidade | retorno=id=5 nome='Habilidade teste' descricao='testando' custo_mana=10 nivel_requerido=1
+2025-05-13 13:22:09,396 - INFO - [CHAMADA] DELETE /habilidade | args=() | kwargs={'habilidade_id': 5}
+2025-05-13 13:22:09,399 - INFO - [RESPOSTA] DELETE /habilidade | retorno={'mensagem': 'Habilidade removida com sucesso'}
+2025-05-13 13:22:12,369 - INFO - [CHAMADA] DELETE /habilidade | args=() | kwargs={'habilidade_id': 5}
+2025-05-13 13:22:35,715 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-13 13:22:35,716 - INFO - [RESPOSTA] GET /habilidade | retorno=[Habilidade(id=5, nome='Habilidade teste', descricao='testando', custo_mana=10, nivel_requerido=1)]
+2025-05-13 13:37:26,155 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-13 13:37:26,183 - INFO - [RESPOSTA] GET /habilidade | retorno=[Habilidade(id=5, nome='Habilidade teste', descricao='testando', custo_mana=10, nivel_requerido=1)]
+2025-05-13 13:37:28,841 - INFO - [CHAMADA] DELETE /habilidade | args=() | kwargs={'habilidade_id': 5}
+2025-05-13 13:37:41,544 - INFO - [CHAMADA] DELETE /habilidade | args=() | kwargs={'habilidade_id': 5}
+2025-05-13 13:37:46,492 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-13 13:37:46,493 - INFO - [RESPOSTA] GET /habilidade | retorno=[Habilidade(id=5, nome='Habilidade teste', descricao='testando', custo_mana=10, nivel_requerido=1)]
+2025-05-13 13:38:48,256 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-13 13:38:48,258 - INFO - [RESPOSTA] GET /habilidade | retorno=[Habilidade(id=5, nome='Habilidade teste', descricao='testando', custo_mana=10, nivel_requerido=1)]
+2025-05-13 13:38:55,717 - INFO - [CHAMADA] DELETE /habilidade | args=() | kwargs={'habilidade_id': 5}
+2025-05-13 13:38:55,719 - INFO - [RESPOSTA] DELETE /habilidade | retorno={'mensagem': 'Habilidade removida com sucesso'}
+2025-05-13 13:39:02,518 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-13 13:39:02,519 - INFO - [RESPOSTA] GET /habilidade | retorno=[]
+2025-05-13 13:39:32,534 - INFO - [CHAMADA] GET /equipamento | args=() | kwargs={}
+2025-05-13 13:39:32,572 - INFO - [RESPOSTA] GET /equipamento | retorno=[Equipamento(id=1, nome='Murakomogiri', tipo='Naginata', ataque=10, defesa=0)]
+2025-05-13 13:40:01,103 - INFO - [CHAMADA] POST /equipamento | args=() | kwargs={'equipamento': Equipamento(id=2, nome='teste', tipo='teste', ataque=1, defesa=1)}
+2025-05-13 13:40:01,105 - INFO - [RESPOSTA] POST /equipamento | retorno=id=2 nome='teste' tipo='teste' ataque=1 defesa=1
+2025-05-13 13:40:07,477 - INFO - [CHAMADA] GET /equipamento | args=() | kwargs={}
+2025-05-13 13:40:07,478 - INFO - [RESPOSTA] GET /equipamento | retorno=[Equipamento(id=1, nome='Murakomogiri', tipo='Naginata', ataque=10, defesa=0), Equipamento(id=2, nome='teste', tipo='teste', ataque=1, defesa=1)]
+2025-05-13 13:40:36,981 - INFO - [CHAMADA] PUT /equipamento | args=() | kwargs={'equipamento_id': 2, 'atualizado': Equipamento(id=2, nome='atualizado', tipo='atualizado', ataque=1, defesa=1)}
+2025-05-13 13:40:36,982 - INFO - [RESPOSTA] PUT /equipamento | retorno=id=2 nome='atualizado' tipo='atualizado' ataque=1 defesa=1
+2025-05-13 13:42:39,964 - INFO - [CHAMADA] DELETE /equipamento | args=() | kwargs={'equipamento_id': 2}
+2025-05-13 13:42:39,967 - INFO - [RESPOSTA] DELETE /equipamento | retorno={'mensagem': 'Equipamento removido com sucesso.'}
+2025-05-13 13:42:47,932 - INFO - [CHAMADA] DELETE /equipamento | args=() | kwargs={'equipamento_id': 2}
+2025-05-13 13:44:18,299 - INFO - [CHAMADA] GET /personagem/quantidade | args=() | kwargs={}
+2025-05-13 13:44:18,334 - INFO - [RESPOSTA] GET /personagem/quantidade | retorno={'quantidade:': 3}
+2025-05-13 13:44:27,415 - INFO - [CHAMADA] GET /habilidade/quantidade | args=() | kwargs={}
+2025-05-13 13:44:27,416 - INFO - [RESPOSTA] GET /habilidade/quantidade | retorno={'quantidade:': 0}
+2025-05-13 13:44:32,948 - INFO - [CHAMADA] GET /equipamento/quantidade | args=() | kwargs={}
+2025-05-13 13:44:32,949 - INFO - [RESPOSTA] GET /equipamento/quantidade | retorno={'quantidade:': 1}
+2025-05-13 13:45:01,727 - INFO - [CHAMADA] GET /personagem/zip | args=() | kwargs={}
+2025-05-13 13:45:01,753 - INFO - [RESPOSTA] GET /personagem/zip | retorno=<starlette.responses.FileResponse object at 0x000002048FCE5D30>
+2025-05-13 13:46:09,079 - INFO - [CHAMADA] GET /habilidade/zip | args=() | kwargs={}
+2025-05-13 13:46:09,082 - INFO - [RESPOSTA] GET /habilidade/zip | retorno=<starlette.responses.FileResponse object at 0x000002048FD21D10>
+2025-05-13 13:47:10,330 - INFO - [CHAMADA] GET /equipamento/zip | args=() | kwargs={}
+2025-05-13 13:47:10,333 - INFO - [RESPOSTA] GET /equipamento/zip | retorno=<starlette.responses.FileResponse object at 0x000002048FD21D10>
+2025-05-13 13:47:14,550 - INFO - [CHAMADA] GET /equipamento/zip | args=() | kwargs={}
+2025-05-13 13:47:14,552 - INFO - [RESPOSTA] GET /equipamento/zip | retorno=<starlette.responses.FileResponse object at 0x000002048FDC4050>
+2025-05-13 14:01:21,942 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'ninja', 'nivel': None}
+2025-05-13 14:01:21,943 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[]
+2025-05-13 14:01:28,428 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'Ninja', 'nivel': None}
+2025-05-13 14:01:28,429 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[Personagem(id=0, nome='Naruto Uzumaki', classe='Ninja', nivel=3, pontos_vida=15)]
+2025-05-13 14:01:35,365 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'Ninja', 'nivel': 1}
+2025-05-13 14:01:35,366 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[]
+2025-05-13 14:01:38,560 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': None, 'nivel': 1}
+2025-05-13 14:01:38,561 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[]
+2025-05-13 14:01:42,802 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': None, 'nivel': 2}
+2025-05-13 14:01:42,803 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[]
+2025-05-13 14:01:46,428 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': None, 'nivel': 3}
+2025-05-13 14:01:46,429 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[Personagem(id=0, nome='Naruto Uzumaki', classe='Ninja', nivel=3, pontos_vida=15)]
+2025-05-13 14:01:53,292 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': None, 'nivel': 10}
+2025-05-13 14:01:53,293 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=150), Personagem(id=2, nome='Dracula', classe='Vampiro Editado', nivel=10, pontos_vida=100)]
+2025-05-13 14:02:04,296 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'Vampiro', 'nivel': None}
+2025-05-13 14:02:04,297 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[]
+2025-05-13 14:02:10,101 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'vampiro', 'nivel': None}
+2025-05-13 14:02:10,102 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[]
+2025-05-13 14:02:17,303 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'vampiro editado', 'nivel': None}
+2025-05-13 14:02:17,305 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[]
+2025-05-13 14:02:40,308 - INFO - [CHAMADA] GET /habilidade/filtrar | args=() | kwargs={'nivel_requerido': 1}
+2025-05-13 14:02:40,309 - INFO - [RESPOSTA] GET /habilidade/filtrar | retorno=[]
+2025-05-13 14:02:44,108 - INFO - [CHAMADA] GET /habilidade/filtrar | args=() | kwargs={'nivel_requerido': 2}
+2025-05-13 14:02:44,109 - INFO - [RESPOSTA] GET /habilidade/filtrar | retorno=[]
+2025-05-13 14:05:35,581 - INFO - [CHAMADA] GET /personagem/hash | args=() | kwargs={}
+2025-05-13 14:05:35,608 - INFO - [RESPOSTA] GET /personagem/hash | retorno={'hash_sha256': '04a1eb99753bd3cae33a60fcfd58209e4c3d2242878661ae7661fb1d832689ec'}
+2025-05-13 14:05:38,549 - INFO - [CHAMADA] GET /personagem/hash | args=() | kwargs={}
+2025-05-13 14:05:38,550 - INFO - [RESPOSTA] GET /personagem/hash | retorno={'hash_sha256': '04a1eb99753bd3cae33a60fcfd58209e4c3d2242878661ae7661fb1d832689ec'}
+2025-05-13 14:05:48,626 - INFO - [CHAMADA] GET /habilidade/hash | args=() | kwargs={}
+2025-05-13 14:05:48,627 - INFO - [RESPOSTA] GET /habilidade/hash | retorno={'hash_sha256': 'c21f154d28c79fa04f3fe242f84b2c79b9c62749ed3b14441dc45ac122668c36'}
+2025-05-13 14:05:57,294 - INFO - [CHAMADA] GET /equipamento/hash | args=() | kwargs={}
+2025-05-13 14:05:57,295 - INFO - [RESPOSTA] GET /equipamento/hash | retorno={'hash_sha256': '0cc73b6e8bd58a4ea3ed1fdc52e4e18ca5436e0934e8570793c516a46ec2273c'}
+2025-05-13 14:15:39,802 - INFO - [CHAMADA] GET /personagem/xml | args=() | kwargs={}
+2025-05-13 14:15:39,837 - INFO - [RESPOSTA] GET /personagem/xml | retorno=<starlette.responses.FileResponse object at 0x000002048EC91940>
+2025-05-13 14:16:43,904 - INFO - [CHAMADA] GET /habilidade/xml | args=() | kwargs={}
+2025-05-13 14:16:43,908 - INFO - [RESPOSTA] GET /habilidade/xml | retorno=<starlette.responses.FileResponse object at 0x000002048FD1AE70>
+2025-05-13 14:16:52,848 - INFO - [CHAMADA] GET /habilidade/xml | args=() | kwargs={}
+2025-05-13 14:16:52,851 - INFO - [RESPOSTA] GET /habilidade/xml | retorno=<starlette.responses.FileResponse object at 0x000002048FCFE690>
+2025-05-13 14:17:38,186 - INFO - [CHAMADA] GET /equipamento/xml | args=() | kwargs={}
+2025-05-13 14:17:38,189 - INFO - [RESPOSTA] GET /equipamento/xml | retorno=<starlette.responses.FileResponse object at 0x000002048FCFE690>
+2025-05-13 15:13:29,115 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'ninja', 'nivel': None}
+2025-05-13 15:13:29,117 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[Personagem(id=0, nome='Naruto Uzumaki', classe='Ninja', nivel=3, pontos_vida=15)]
+2025-05-13 15:13:35,616 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'PIRATA', 'nivel': None}
+2025-05-13 15:13:35,617 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=150)]
+2025-05-13 15:13:41,962 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'VAMPIRO', 'nivel': None}
+2025-05-13 15:13:41,962 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[]
+2025-05-13 15:13:45,999 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'VAMPIRO EDITADO', 'nivel': None}
+2025-05-13 15:13:46,000 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[Personagem(id=2, nome='Dracula', classe='Vampiro Editado', nivel=10, pontos_vida=100)]
+2025-05-13 15:13:53,896 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'PIRATA', 'nivel': None}
+2025-05-13 15:13:53,896 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=150)]
+2025-05-13 15:39:08,330 - INFO - [CHAMADA] GET /personagem | args=() | kwargs={}
+2025-05-13 15:39:08,362 - INFO - [RESPOSTA] GET /personagem | retorno=[Personagem(id=0, nome='Naruto Uzumaki', classe='Ninja', nivel=3, pontos_vida=15), Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=100), Personagem(id=2, nome='Dracula', classe='Vampiro', nivel=10, pontos_vida=200), Personagem(id=3, nome='Tanjiro e Nezuko', classe=' Caçadores de Onis', nivel=8, pontos_vida=30), Personagem(id=4, nome='Kairo God', classe='Berserker', nivel=3, pontos_vida=333)]
+2025-05-14 15:56:38,517 - INFO - [CHAMADA] GET /personagem | args=() | kwargs={}
+2025-05-14 15:56:38,535 - INFO - [RESPOSTA] GET /personagem | retorno=[Personagem(id=0, nome='Naruto Uzumaki', classe='Ninja', nivel=3, pontos_vida=15), Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=100), Personagem(id=2, nome='Dracula', classe='Vampiro', nivel=10, pontos_vida=200), Personagem(id=3, nome='Tanjiro e Nezuko', classe=' Caçadores de Onis', nivel=8, pontos_vida=30), Personagem(id=4, nome='Kairo God', classe='Berserker', nivel=3, pontos_vida=333)]
+2025-05-14 15:57:21,312 - INFO - [CHAMADA] POST /personagem | args=() | kwargs={'personagem': Personagem(id=99, nome='Renan', classe='Arqueiro', nivel=2, pontos_vida=10)}
+2025-05-14 15:57:21,315 - INFO - [RESPOSTA] POST /personagem | retorno=id=99 nome='Renan' classe='Arqueiro' nivel=2 pontos_vida=10
+2025-05-14 15:57:49,597 - INFO - [CHAMADA] PUT /personagem | args=() | kwargs={'personagem_id': 99, 'atualizado': Personagem(id=99, nome='Renan Editado', classe='Ladino', nivel=5, pontos_vida=12)}
+2025-05-14 15:57:49,598 - INFO - [RESPOSTA] PUT /personagem | retorno=id=99 nome='Renan Editado' classe='Ladino' nivel=5 pontos_vida=12
+2025-05-14 15:58:03,214 - INFO - [CHAMADA] DELETE /personagem | args=() | kwargs={'personagem_id': 99}
+2025-05-14 15:58:03,216 - INFO - [RESPOSTA] DELETE /personagem | retorno={'mensagem': 'Personagem removido com sucesso'}
+2025-05-14 15:58:29,386 - INFO - [CHAMADA] GET /personagem/quantidade | args=() | kwargs={}
+2025-05-14 15:58:29,386 - INFO - [RESPOSTA] GET /personagem/quantidade | retorno={'quantidade': 5}
+2025-05-14 15:58:34,672 - INFO - [CHAMADA] GET /personagem/zip | args=() | kwargs={}
+2025-05-14 15:58:34,676 - INFO - [RESPOSTA] GET /personagem/zip | retorno=<starlette.responses.FileResponse object at 0x0000023CC1EA5FD0>
+2025-05-14 16:00:17,891 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'pirata', 'nivel': None}
+2025-05-14 16:00:17,891 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=100)]
+2025-05-14 16:00:23,738 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': None, 'nivel': 2}
+2025-05-14 16:00:23,739 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[]
+2025-05-14 16:00:26,897 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': None, 'nivel': 3}
+2025-05-14 16:00:26,897 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[Personagem(id=0, nome='Naruto Uzumaki', classe='Ninja', nivel=3, pontos_vida=15), Personagem(id=4, nome='Kairo God', classe='Berserker', nivel=3, pontos_vida=333)]
+2025-05-14 16:00:35,016 - INFO - [CHAMADA] GET /personagem/hash | args=() | kwargs={}
+2025-05-14 16:00:35,017 - INFO - [RESPOSTA] GET /personagem/hash | retorno={'hash_sha256': '255e7206001cc57dd114fb85b043ddf225edbb11cd855d01fc0a42989fd61375'}
+2025-05-14 16:00:45,417 - INFO - [CHAMADA] GET /personagem/xml | args=() | kwargs={}
+2025-05-14 16:00:45,421 - INFO - [RESPOSTA] GET /personagem/xml | retorno=<starlette.responses.FileResponse object at 0x0000023CC1EB7890>
+2025-05-14 16:00:59,779 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-14 16:01:08,542 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-14 16:02:09,585 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-14 16:06:07,660 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-14 16:06:07,680 - INFO - [RESPOSTA] GET /habilidade | retorno=[Habilidade(id=1, nome='Clone das Sombras', descricao='Cria vários clones de si mesmo.', custo_mana=5, nivel_requerido=8), Habilidade(id=2, nome='Invocação de Espiritos', descricao='Invoca espiritos para ajudar na batalha', custo_mana=10, nivel_requerido=8), Habilidade(id=3, nome='Canção de cura', descricao='Cura todos os aliados que estiverem no alcance da música', custo_mana=8, nivel_requerido=4), Habilidade(id=4, nome='Prever futuro', descricao='Consegue visualizar alguns segundos do futuro.', custo_mana=15, nivel_requerido=10), Habilidade(id=5, nome='Haki do Conquistador', descricao='Derruba os inimigos apenas com sua determinação', custo_mana=12, nivel_requerido=44)]
+2025-05-14 16:06:24,123 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-14 16:06:24,124 - INFO - [RESPOSTA] GET /habilidade | retorno=[Habilidade(id=1, nome='Clone das Sombras', descricao='Cria vários clones de si mesmo.', custo_mana=5, nivel_requerido=8), Habilidade(id=2, nome='Invocação de Espiritos', descricao='Invoca espiritos para ajudar na batalha', custo_mana=10, nivel_requerido=8), Habilidade(id=3, nome='Canção de cura', descricao='Cura todos os aliados que estiverem no alcance da música', custo_mana=8, nivel_requerido=4), Habilidade(id=4, nome='Prever futuro', descricao='Consegue visualizar alguns segundos do futuro.', custo_mana=15, nivel_requerido=10), Habilidade(id=5, nome='Haki do Conquistador', descricao='Derruba os inimigos apenas com sua determinação', custo_mana=12, nivel_requerido=44)]
+2025-05-14 16:06:40,260 - INFO - [CHAMADA] POST /habilidade | args=() | kwargs={'habilidade': Habilidade(id=99, nome='Shamac', descricao='Solta uma cortina de fumaça preta atordoando o inimigo', custo_mana=5, nivel_requerido=3)}
+2025-05-14 16:06:40,262 - INFO - [RESPOSTA] POST /habilidade | retorno=id=99 nome='Shamac' descricao='Solta uma cortina de fumaça preta atordoando o inimigo' custo_mana=5 nivel_requerido=3
+2025-05-14 16:06:50,448 - INFO - [CHAMADA] GET /habilidade | args=() | kwargs={}
+2025-05-14 16:06:50,449 - INFO - [RESPOSTA] GET /habilidade | retorno=[Habilidade(id=1, nome='Clone das Sombras', descricao='Cria vários clones de si mesmo.', custo_mana=5, nivel_requerido=8), Habilidade(id=2, nome='Invocação de Espiritos', descricao='Invoca espiritos para ajudar na batalha', custo_mana=10, nivel_requerido=8), Habilidade(id=3, nome='Canção de cura', descricao='Cura todos os aliados que estiverem no alcance da música', custo_mana=8, nivel_requerido=4), Habilidade(id=4, nome='Prever futuro', descricao='Consegue visualizar alguns segundos do futuro.', custo_mana=15, nivel_requerido=10), Habilidade(id=5, nome='Haki do Conquistador', descricao='Derruba os inimigos apenas com sua determinação', custo_mana=12, nivel_requerido=44), Habilidade(id=99, nome='Shamac', descricao='Solta uma cortina de fumaça preta atordoando o inimigo', custo_mana=5, nivel_requerido=3)]
+2025-05-14 16:07:05,533 - INFO - [CHAMADA] PUT /habilidade | args=() | kwargs={'habilidade_id': 99, 'atualizado': Habilidade(id=99, nome='Transformação', descricao='Se transforma em outra pessoa.', custo_mana=3, nivel_requerido=8)}
+2025-05-14 16:07:05,534 - INFO - [RESPOSTA] PUT /habilidade | retorno=id=99 nome='Transformação' descricao='Se transforma em outra pessoa.' custo_mana=3 nivel_requerido=8
+2025-05-14 16:07:12,379 - INFO - [CHAMADA] DELETE /habilidade | args=() | kwargs={'habilidade_id': 99}
+2025-05-14 16:07:12,381 - INFO - [RESPOSTA] DELETE /habilidade | retorno={'mensagem': 'Habilidade removida com sucesso'}
+2025-05-14 16:07:15,839 - INFO - [CHAMADA] DELETE /habilidade | args=() | kwargs={'habilidade_id': 1000}
+2025-05-14 16:07:21,047 - INFO - [CHAMADA] GET /habilidade/quantidade | args=() | kwargs={}
+2025-05-14 16:07:21,048 - INFO - [RESPOSTA] GET /habilidade/quantidade | retorno={'quantidade': 5}
+2025-05-14 16:07:35,050 - INFO - [CHAMADA] GET /habilidade/zip | args=() | kwargs={}
+2025-05-14 16:07:35,052 - INFO - [RESPOSTA] GET /habilidade/zip | retorno=<starlette.responses.FileResponse object at 0x0000023CC1EB74D0>
+2025-05-14 16:07:35,866 - INFO - [CHAMADA] GET /habilidade/zip | args=() | kwargs={}
+2025-05-14 16:07:35,867 - INFO - [RESPOSTA] GET /habilidade/zip | retorno=<starlette.responses.FileResponse object at 0x0000023CC1E476F0>
+2025-05-14 16:07:45,883 - INFO - [CHAMADA] GET /habilidade/filtrar | args=() | kwargs={'nivel_requerido': 3}
+2025-05-14 16:07:45,884 - INFO - [RESPOSTA] GET /habilidade/filtrar | retorno=[]
+2025-05-14 16:07:54,710 - INFO - [CHAMADA] GET /habilidade/filtrar | args=() | kwargs={'nivel_requerido': 5}
+2025-05-14 16:07:54,710 - INFO - [RESPOSTA] GET /habilidade/filtrar | retorno=[]
+2025-05-14 16:07:57,935 - INFO - [CHAMADA] GET /habilidade/filtrar | args=() | kwargs={'nivel_requerido': 10}
+2025-05-14 16:07:57,936 - INFO - [RESPOSTA] GET /habilidade/filtrar | retorno=[Habilidade(id=4, nome='Prever futuro', descricao='Consegue visualizar alguns segundos do futuro.', custo_mana=15, nivel_requerido=10)]
+2025-05-14 16:08:04,920 - INFO - [CHAMADA] GET /habilidade/hash | args=() | kwargs={}
+2025-05-14 16:08:04,920 - INFO - [RESPOSTA] GET /habilidade/hash | retorno={'hash_sha256': '5d90cbfd3eed5c4665b8a065481ee47793947e6fa78e77b17e9a49a16edbce65'}
+2025-05-14 16:08:05,511 - INFO - [CHAMADA] GET /habilidade/hash | args=() | kwargs={}
+2025-05-14 16:08:05,511 - INFO - [RESPOSTA] GET /habilidade/hash | retorno={'hash_sha256': '5d90cbfd3eed5c4665b8a065481ee47793947e6fa78e77b17e9a49a16edbce65'}
+2025-05-14 16:08:09,852 - INFO - [CHAMADA] GET /habilidade/xml | args=() | kwargs={}
+2025-05-14 16:08:09,854 - INFO - [RESPOSTA] GET /habilidade/xml | retorno=<starlette.responses.FileResponse object at 0x0000023CC1E476F0>
+2025-05-14 16:08:10,753 - INFO - [CHAMADA] GET /habilidade/xml | args=() | kwargs={}
+2025-05-14 16:08:10,755 - INFO - [RESPOSTA] GET /habilidade/xml | retorno=<starlette.responses.FileResponse object at 0x0000023CC1ECF530>
+2025-05-14 16:08:26,237 - INFO - [CHAMADA] GET /equipamento | args=() | kwargs={}
+2025-05-14 16:08:26,239 - INFO - [RESPOSTA] GET /equipamento | retorno=[Equipamento(id=1, nome='Murakomogiri', tipo='Naginata', ataque=10, defesa=0), Equipamento(id=2, nome='Lua Sangrenta', tipo='Katana', ataque=25, defesa=13), Equipamento(id=3, nome='Bayoneta', tipo='Garrucha', ataque=12, defesa=2), Equipamento(id=4, nome='Sol Sombrio', tipo='Escudo', ataque=3, defesa=18), Equipamento(id=5, nome='Armadura Berserker', tipo='Armadura', ataque=18, defesa=18), Equipamento(id=6, nome='Escalibur', tipo='Espada', ataque=30, defesa=5)]
+2025-05-14 16:08:43,063 - INFO - [CHAMADA] POST /equipamento | args=() | kwargs={'equipamento': Equipamento(id=99, nome='Disparo Veloz', tipo='Arco', ataque=12, defesa=0)}
+2025-05-14 16:08:43,064 - INFO - [RESPOSTA] POST /equipamento | retorno=id=99 nome='Disparo Veloz' tipo='Arco' ataque=12 defesa=0
+2025-05-14 16:08:58,283 - INFO - [CHAMADA] PUT /equipamento | args=() | kwargs={'equipamento_id': 99, 'atualizado': Equipamento(id=99, nome='Pele de Urso', tipo='Armadura', ataque=2, defesa=20)}
+2025-05-14 16:08:58,298 - INFO - [RESPOSTA] PUT /equipamento | retorno=id=99 nome='Pele de Urso' tipo='Armadura' ataque=2 defesa=20
+2025-05-14 16:09:06,339 - INFO - [CHAMADA] DELETE /equipamento | args=() | kwargs={'equipamento_id': 99}
+2025-05-14 16:09:06,352 - INFO - [RESPOSTA] DELETE /equipamento | retorno={'mensagem': 'Equipamento removido com sucesso'}
+2025-05-14 16:09:12,758 - INFO - [CHAMADA] GET /equipamento/quantidade | args=() | kwargs={}
+2025-05-14 16:09:12,773 - INFO - [RESPOSTA] GET /equipamento/quantidade | retorno={'quantidade': 6}
+2025-05-14 16:09:18,902 - INFO - [CHAMADA] GET /equipamento/zip | args=() | kwargs={}
+2025-05-14 16:09:18,904 - INFO - [RESPOSTA] GET /equipamento/zip | retorno=<starlette.responses.FileResponse object at 0x0000023CC1E9B460>
+2025-05-14 16:09:28,495 - INFO - [CHAMADA] GET /equipamento/filtrar | args=() | kwargs={'tipo': 'armadura'}
+2025-05-14 16:09:28,496 - INFO - [RESPOSTA] GET /equipamento/filtrar | retorno=[Equipamento(id=5, nome='Armadura Berserker', tipo='Armadura', ataque=18, defesa=18)]
+2025-05-14 16:09:34,252 - INFO - [CHAMADA] GET /equipamento/filtrar | args=() | kwargs={'tipo': 'escudo'}
+2025-05-14 16:09:34,253 - INFO - [RESPOSTA] GET /equipamento/filtrar | retorno=[Equipamento(id=4, nome='Sol Sombrio', tipo='Escudo', ataque=3, defesa=18)]
+2025-05-14 16:09:38,588 - INFO - [CHAMADA] GET /equipamento/filtrar | args=() | kwargs={'tipo': 'espada'}
+2025-05-14 16:09:38,588 - INFO - [RESPOSTA] GET /equipamento/filtrar | retorno=[Equipamento(id=6, nome='Escalibur', tipo='Espada', ataque=30, defesa=5)]
+2025-05-14 16:10:10,927 - INFO - [CHAMADA] GET /equipamento/hash | args=() | kwargs={}
+2025-05-14 16:10:10,928 - INFO - [RESPOSTA] GET /equipamento/hash | retorno={'hash_sha256': 'e737b7a8faffba62ea56594175f5b69439d5b23ec2da7222771dc24ac2efc51e'}
+2025-05-14 16:10:16,596 - INFO - [CHAMADA] GET /equipamento/xml | args=() | kwargs={}
+2025-05-14 16:10:16,598 - INFO - [RESPOSTA] GET /equipamento/xml | retorno=<starlette.responses.FileResponse object at 0x0000023CC1E9B460>
+2025-05-14 16:50:35,902 - INFO - [CHAMADA] POST /personagem | args=() | kwargs={'personagem': Personagem(id=99, nome='Renan', classe='Arqueiro', nivel=2, pontos_vida=10)}
+2025-05-14 16:50:35,907 - INFO - [RESPOSTA] POST /personagem | retorno=id=99 nome='Renan' classe='Arqueiro' nivel=2 pontos_vida=10
+2025-05-14 16:50:50,661 - INFO - [CHAMADA] GET /personagem/quantidade | args=() | kwargs={}
+2025-05-14 16:50:50,662 - INFO - [RESPOSTA] GET /personagem/quantidade | retorno={'quantidade': 6}
+2025-05-14 16:51:07,114 - INFO - [CHAMADA] GET /habilidade/zip | args=() | kwargs={}
+2025-05-14 16:51:07,144 - INFO - [RESPOSTA] GET /habilidade/zip | retorno=<starlette.responses.FileResponse object at 0x00000253F2FD6120>
+2025-05-14 16:51:28,946 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': 'pirata', 'nivel': None}
+2025-05-14 16:51:28,947 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[Personagem(id=1, nome='Monkey D. Luffy ', classe='Pirata', nivel=10, pontos_vida=100)]
+2025-05-14 16:51:37,073 - INFO - [CHAMADA] GET /personagem/filtrar | args=() | kwargs={'classe': None, 'nivel': 3}
+2025-05-14 16:51:37,074 - INFO - [RESPOSTA] GET /personagem/filtrar | retorno=[Personagem(id=0, nome='Naruto Uzumaki', classe='Ninja', nivel=3, pontos_vida=15), Personagem(id=4, nome='Kairo God', classe='Berserker', nivel=3, pontos_vida=333)]
+2025-05-14 16:51:48,978 - INFO - [CHAMADA] GET /equipamento/hash | args=() | kwargs={}
+2025-05-14 16:51:48,980 - INFO - [RESPOSTA] GET /equipamento/hash | retorno={'hash_sha256': 'e737b7a8faffba62ea56594175f5b69439d5b23ec2da7222771dc24ac2efc51e'}
+2025-05-14 16:51:57,167 - INFO - [CHAMADA] GET /equipamento/xml | args=() | kwargs={}
+2025-05-14 16:51:57,170 - INFO - [RESPOSTA] GET /equipamento/xml | retorno=<starlette.responses.FileResponse object at 0x00000253F30A8050>

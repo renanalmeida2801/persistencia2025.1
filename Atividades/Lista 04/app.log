@@ -1,0 +1,6 @@
+2025-05-03 10:17:14,966 - INFO - Aplicacao iniciada.
+2025-05-03 10:17:14,966 - INFO - 3 registros carregados do arquivo data.json.
+2025-05-03 10:17:14,966 - INFO - processando Id 1: Jhon tem 30 anos.
+2025-05-03 10:17:14,966 - INFO - processando Id 2: Alice tem 25 anos.
+2025-05-03 10:17:14,966 - WARNING - Id 3 (Bob) tem idade ausente.
+2025-05-03 10:17:14,966 - INFO - Aplicacao finalizada.
