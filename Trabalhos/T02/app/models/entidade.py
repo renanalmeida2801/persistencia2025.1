@@ -8,5 +8,6 @@ class EntidadeSobrenatural(SQLModel, table=True):
     periculosidade: str
     descricao: str
     aparicoes_confirmadas: int
+    tipo: Optional[str] = Field(default=None) 
 
     relatos: List["Relato"] = Relationship(back_populates="entidade")
