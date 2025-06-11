@@ -20,10 +20,36 @@ def criar_testemunha(testemunha: Testemunha, session: Session = Depends(get_sess
         log_error(f"Erro ao criar testemunha: {e}")
         raise
 
+@router.get("/filtro", response_model=List[Testemunha])
+def filtrar_testemunhas(
+    nome: str = None,
+    tipo_relacao: str = None,
+    experiencia_prévia: bool = None,
+    session: Session = Depends(get_session)
+):
+    try:
+        query = select(Testemunha)
+        filtros = {}
+        if nome:
+            query = query.where(Testemunha.nome.contains(nome))
+            filtros["nome"] = nome
+        if tipo_relacao:
+            query = query.where(Testemunha.tipo_relacao.contains(tipo_relacao))
+            filtros["tipo_relacao"] = tipo_relacao
+        if experiencia_prévia is not None:
+            query = query.where(Testemunha.experiencia_prévia == experiencia_prévia)
+            filtros["experiencia_prévia"] = experiencia_prévia
+        resultados = session.exec(query).all()
+        log_info(f"Filtro aplicado em testemunhas: {filtros} - {len(resultados)} resultados")
+        return resultados
+    except Exception as e:
+        log_error(f"Erro ao filtrar testemunhas: {e}")
+        raise
+
 @router.get("/quantidade", response_model=dict)
 def contar_testemunhas(session: Session = Depends(get_session)):
     try:
-        quantidade = session.exec(select(Testemunha)).count()
+        quantidade = len(session.exec(select(Testemunha)).all())
         log_info(f"Quantidade de testemunhas: {quantidade}")
         return {"quantidade": quantidade}
     except Exception as e:
@@ -88,30 +114,4 @@ def deletar_testemunha(testemunha_id: int, session: Session = Depends(get_sessio
         return {"ok": True, "mensagem":"Testemunha removida com sucesso"}
     except Exception as e:
         log_error(f"Erro ao deletar testemunha: {e}")
-        raise
-
-@router.get("/filtro", response_model=List[Testemunha])
-def filtrar_testemunhas(
-    nome: str = None,
-    tipo_relacao: str = None,
-    experiencia_prévia: bool = None,
-    session: Session = Depends(get_session)
-):
-    try:
-        query = select(Testemunha)
-        filtros = {}
-        if nome:
-            query = query.where(Testemunha.nome.contains(nome))
-            filtros["nome"] = nome
-        if tipo_relacao:
-            query = query.where(Testemunha.tipo_relacao.contains(tipo_relacao))
-            filtros["tipo_relacao"] = tipo_relacao
-        if experiencia_prévia is not None:
-            query = query.where(Testemunha.experiencia_prévia == experiencia_prévia)
-            filtros["experiencia_prévia"] = experiencia_prévia
-        resultados = session.exec(query).all()
-        log_info(f"Filtro aplicado em testemunhas: {filtros} - {len(resultados)} resultados")
-        return resultados
-    except Exception as e:
-        log_error(f"Erro ao filtrar testemunhas: {e}")
         raise

@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Depends, Query
 from sqlmodel import Session, select
-from typing import List
+from typing import List, Optional
 from sqlalchemy import func
 
 from app.models.categoria import CategoriaFenomeno
@@ -21,10 +21,32 @@ def criar_categoria(categoria: CategoriaFenomeno, session: Session = Depends(get
         log_error(f"Erro ao criar categoria: {e}")
         raise
 
+@router.get("/filtro", response_model=List[CategoriaFenomeno])
+def filtrar_categorias(
+    nome: Optional[str] = Query(default=None),
+    explicacao_possivel: Optional[str] = Query(default=None),
+    session: Session = Depends(get_session)
+):
+    try:
+        query = select(CategoriaFenomeno)
+        filtros = {}
+        if nome:
+            query = query.where(CategoriaFenomeno.nome.contains(nome))
+            filtros["nome"] = nome
+        if explicacao_possivel:
+            query = query.where(CategoriaFenomeno.explicacao_possivel.contains(explicacao_possivel))
+            filtros["explicacao_possivel"] = explicacao_possivel
+        resultados = session.exec(query).all()
+        log_info(f"Filtro aplicado em categorias: {filtros} - {len(resultados)} resultados")
+        return resultados
+    except Exception as e:
+        log_error(f"Erro ao filtrar categorias: {e}")
+        raise
+
 @router.get("/quantidade", response_model=dict)
 def contar_categorias(session: Session = Depends(get_session)):
     try:
-        quantidade = session.exec(select(CategoriaFenomeno)).count()
+        quantidade = len(session.exec(select(CategoriaFenomeno)).all())
         log_info(f"Quantidade de categorias: {quantidade}")
         return {"quantidade": quantidade}
     except Exception as e:
@@ -89,26 +111,4 @@ def deletar_categoria(categoria_id: int, session: Session = Depends(get_session)
         return {"ok": True, "mensagem": "Categoria deletada com sucesso"}
     except Exception as e:
         log_error(f"Erro ao deletar categoria: {e}")
-        raise
-
-@router.get("/filtro", response_model=List[CategoriaFenomeno])
-def filtrar_categorias(
-    nome: str = None,
-    explicacao_possivel: str = None,
-    session: Session = Depends(get_session)
-):
-    try:
-        query = select(CategoriaFenomeno)
-        filtros = {}
-        if nome:
-            query = query.where(CategoriaFenomeno.nome.contains(nome))
-            filtros["nome"] = nome
-        if explicacao_possivel:
-            query = query.where(CategoriaFenomeno.explicacao_possivel.contains(explicacao_possivel))
-            filtros["explicacao_possivel"] = explicacao_possivel
-        resultados = session.exec(query).all()
-        log_info(f"Filtro aplicado em categorias: {filtros} - {len(resultados)} resultados")
-        return resultados
-    except Exception as e:
-        log_error(f"Erro ao filtrar categorias: {e}")
         raise

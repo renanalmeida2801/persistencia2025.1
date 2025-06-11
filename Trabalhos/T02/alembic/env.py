@@ -14,11 +14,18 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-# add your model's MetaData object here
-# for 'autogenerate' support
-# from myapp import mymodel
-# target_metadata = mymodel.Base.metadata
-target_metadata = None
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from sqlmodel import SQLModel
+from app.models import Relato, Testemunha, EntidadeSobrenatural, CategoriaFenomeno, RegistroMultimidia
+from app.database import engine
+
+target_metadata = SQLModel.metadata
+
+
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

@@ -22,10 +22,32 @@ def criar_entidade(entidade: EntidadeSobrenatural, session: Session = Depends(ge
         log_error(f"Erro ao criar entidade: {e}")
         raise
 
+@router.get("/filtro", response_model=List[EntidadeSobrenatural])
+def filtrar_entidades(
+    nome: str = None,
+    origem: str = None,
+    session: Session = Depends(get_session)
+):
+    try:
+        query = select(EntidadeSobrenatural)
+        filtros = {}
+        if nome:
+            query = query.where(EntidadeSobrenatural.nome.contains(nome))
+            filtros["nome"] = nome
+        if origem:
+            query = query.where(EntidadeSobrenatural.origem.contains(origem))
+            filtros["origem"] = origem
+        resultados = session.exec(query).all()
+        log_info(f"Filtro aplicado em entidades: {filtros} - {len(resultados)} resultados")
+        return resultados
+    except Exception as e:
+        log_error(f"Erro ao filtrar entidades: {e}")
+        raise
+
 @router.get("/quantidade", response_model=dict)
 def contar_entidades(session: Session = Depends(get_session)):
     try:
-        quantidade = session.exec(select(EntidadeSobrenatural)).count()
+        quantidade = len(session.exec(select(EntidadeSobrenatural)).all())
         log_info(f"Quantidade de entidades: {quantidade}")
         return {"quantidade": quantidade}
     except Exception as e:
@@ -90,26 +112,4 @@ def deletar_entidade(entidade_id: int, session: Session = Depends(get_session)):
         return {"ok": True, "mensagem": "Entidade deletada com sucesso"}
     except Exception as e:
         log_error(f"Erro ao deletar entidade: {e}")
-        raise
-
-@router.get("/filtro", response_model=List[EntidadeSobrenatural])
-def filtrar_entidades(
-    nome: str = None,
-    origem: str = None,
-    session: Session = Depends(get_session)
-):
-    try:
-        query = select(EntidadeSobrenatural)
-        filtros = {}
-        if nome:
-            query = query.where(EntidadeSobrenatural.nome.contains(nome))
-            filtros["nome"] = nome
-        if origem:
-            query = query.where(EntidadeSobrenatural.origem.contains(origem))
-            filtros["origem"] = origem
-        resultados = session.exec(query).all()
-        log_info(f"Filtro aplicado em entidades: {filtros} - {len(resultados)} resultados")
-        return resultados
-    except Exception as e:
-        log_error(f"Erro ao filtrar entidades: {e}")
         raise

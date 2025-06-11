@@ -20,10 +20,32 @@ def criar_registro(registro: RegistroMultimidia, session:Session = Depends(get_s
         log_error(f"Erro ao criar registro: {e}")
         raise
 
+@router.get("/filtro", response_model=List[RegistroMultimidia])
+def filtrar_registros(
+    tipo: str = None,
+    legenda: str = None,
+    session: Session = Depends(get_session)
+):
+    try:
+        query = select(RegistroMultimidia)
+        filtros = {}
+        if tipo:
+            query = query.where(RegistroMultimidia.tipo.contains(tipo))
+            filtros["tipo"] = tipo
+        if legenda:
+            query = query.where(RegistroMultimidia.legenda.contains(legenda))
+            filtros["legenda"] = legenda
+        resultados = session.exec(query).all()
+        log_info(f"Filtro aplicado em registros: {filtros} - {len(resultados)} resultados")
+        return resultados
+    except Exception as e:
+        log_error(f"Erro ao filtrar registros: {e}")
+        raise
+
 @router.get("/quantidade", response_model=dict)
 def contar_registros(session: Session = Depends(get_session)):
     try:
-        quantidade = session.exec(select(RegistroMultimidia)).count()
+        quantidade = len(session.exec(select(RegistroMultimidia)).all())
         log_info(f"Quantidade de registros: {quantidade}")
         return {"quantidade": quantidade}
     except Exception as e:
@@ -88,26 +110,4 @@ def deletar_registro(registro_id: int, session: Session = Depends(get_session)):
         return {"ok": True, "mensagem": "Registro removido com sucesso"}
     except Exception as e:
         log_error(f"Erro ao deletar registro: {e}")
-        raise
-
-@router.get("/filtro", response_model=List[RegistroMultimidia])
-def filtrar_registros(
-    tipo: str = None,
-    legenda: str = None,
-    session: Session = Depends(get_session)
-):
-    try:
-        query = select(RegistroMultimidia)
-        filtros = {}
-        if tipo:
-            query = query.where(RegistroMultimidia.tipo.contains(tipo))
-            filtros["tipo"] = tipo
-        if legenda:
-            query = query.where(RegistroMultimidia.legenda.contains(legenda))
-            filtros["legenda"] = legenda
-        resultados = session.exec(query).all()
-        log_info(f"Filtro aplicado em registros: {filtros} - {len(resultados)} resultados")
-        return resultados
-    except Exception as e:
-        log_error(f"Erro ao filtrar registros: {e}")
         raise

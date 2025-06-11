@@ -1,0 +1,917 @@
+2025-06-10 22:14:12,677 - INFO - select pg_catalog.version()
+2025-06-10 22:14:12,677 - INFO - [raw sql] {}
+2025-06-10 22:14:12,678 - INFO - select current_schema()
+2025-06-10 22:14:12,678 - INFO - [raw sql] {}
+2025-06-10 22:14:12,679 - INFO - show standard_conforming_strings
+2025-06-10 22:14:12,679 - INFO - [raw sql] {}
+2025-06-10 22:14:12,679 - INFO - BEGIN (implicit)
+2025-06-10 22:14:12,682 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:14:12,682 - INFO - [generated in 0.00017s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:14:12,683 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:14:12,683 - INFO - [cached since 0.001631s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:14:12,684 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:14:12,684 - INFO - [cached since 0.002442s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:14:12,684 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:14:12,684 - INFO - [cached since 0.002913s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:14:12,685 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:14:12,685 - INFO - [cached since 0.003327s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:14:12,685 - INFO - COMMIT
+2025-06-10 22:19:24,874 - INFO - BEGIN (implicit)
+2025-06-10 22:19:24,886 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:19:24,886 - INFO - [generated in 0.00034s] {'param_1': 10, 'param_2': 0}
+2025-06-10 22:19:24,888 - INFO - Listagem de categorias: página 1, limite 10
+2025-06-10 22:19:24,888 - INFO - ROLLBACK
+2025-06-10 22:20:54,133 - INFO - BEGIN (implicit)
+2025-06-10 22:20:54,134 - INFO - INSERT INTO categoriafenomeno (nome, explicacao_possivel, nivel_misterio, popularidade) VALUES (%(nome)s, %(explicacao_possivel)s, %(nivel_misterio)s, %(popularidade)s) RETURNING categoriafenomeno.id
+2025-06-10 22:20:54,134 - INFO - [generated in 0.00022s] {'nome': 'Aparições Fantasmagóricas', 'explicacao_possivel': 'Alucinação, truques de luz ou reflexos', 'nivel_misterio': 8, 'popularidade': 9}
+2025-06-10 22:20:54,135 - INFO - COMMIT
+2025-06-10 22:20:54,138 - INFO - BEGIN (implicit)
+2025-06-10 22:20:54,139 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+WHERE categoriafenomeno.id = %(pk_1)s
+2025-06-10 22:20:54,139 - INFO - [generated in 0.00019s] {'pk_1': 1}
+2025-06-10 22:20:54,140 - INFO - Categoria criada: explicacao_possivel='Alucinação, truques de luz ou reflexos' nome='Aparições Fantasmagóricas' popularidade=9 id=1 nivel_misterio=8
+2025-06-10 22:20:54,141 - INFO - ROLLBACK
+2025-06-10 22:21:41,553 - INFO - BEGIN (implicit)
+2025-06-10 22:21:41,553 - INFO - INSERT INTO categoriafenomeno (nome, explicacao_possivel, nivel_misterio, popularidade) VALUES (%(nome)s, %(explicacao_possivel)s, %(nivel_misterio)s, %(popularidade)s) RETURNING categoriafenomeno.id
+2025-06-10 22:21:41,553 - INFO - [cached since 47.42s ago] {'nome': 'Objetos se Movendo Sozinhos', 'explicacao_possivel': 'Correntes de ar, instabilidade estrutural, truques', 'nivel_misterio': 7, 'popularidade': 8}
+2025-06-10 22:21:41,554 - INFO - COMMIT
+2025-06-10 22:21:41,556 - INFO - BEGIN (implicit)
+2025-06-10 22:21:41,556 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+WHERE categoriafenomeno.id = %(pk_1)s
+2025-06-10 22:21:41,556 - INFO - [cached since 47.42s ago] {'pk_1': 2}
+2025-06-10 22:21:41,557 - INFO - Categoria criada: explicacao_possivel='Correntes de ar, instabilidade estrutural, truques' nome='Objetos se Movendo Sozinhos' popularidade=8 id=2 nivel_misterio=7
+2025-06-10 22:21:41,558 - INFO - ROLLBACK
+2025-06-10 22:22:20,860 - INFO - BEGIN (implicit)
+2025-06-10 22:22:20,860 - INFO - INSERT INTO categoriafenomeno (nome, explicacao_possivel, nivel_misterio, popularidade) VALUES (%(nome)s, %(explicacao_possivel)s, %(nivel_misterio)s, %(popularidade)s) RETURNING categoriafenomeno.id
+2025-06-10 22:22:20,860 - INFO - [cached since 86.73s ago] {'nome': 'Mudanças de Temperatura Súbitas', 'explicacao_possivel': 'Problemas no encanamento ou ventilação', 'nivel_misterio': 5, 'popularidade': 6}
+2025-06-10 22:22:20,861 - INFO - COMMIT
+2025-06-10 22:22:20,862 - INFO - BEGIN (implicit)
+2025-06-10 22:22:20,863 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+WHERE categoriafenomeno.id = %(pk_1)s
+2025-06-10 22:22:20,863 - INFO - [cached since 86.72s ago] {'pk_1': 3}
+2025-06-10 22:22:20,864 - INFO - Categoria criada: explicacao_possivel='Problemas no encanamento ou ventilação' nome='Mudanças de Temperatura Súbitas' popularidade=6 id=3 nivel_misterio=5
+2025-06-10 22:22:20,864 - INFO - ROLLBACK
+2025-06-10 22:22:34,481 - INFO - BEGIN (implicit)
+2025-06-10 22:22:34,481 - INFO - INSERT INTO categoriafenomeno (nome, explicacao_possivel, nivel_misterio, popularidade) VALUES (%(nome)s, %(explicacao_possivel)s, %(nivel_misterio)s, %(popularidade)s) RETURNING categoriafenomeno.id
+2025-06-10 22:22:34,482 - INFO - [cached since 100.3s ago] {'nome': 'Sons Inexplicáveis', 'explicacao_possivel': 'Animais, encanamento antigo, acústica do ambiente', 'nivel_misterio': 6, 'popularidade': 7}
+2025-06-10 22:22:34,482 - INFO - COMMIT
+2025-06-10 22:22:34,485 - INFO - BEGIN (implicit)
+2025-06-10 22:22:34,485 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+WHERE categoriafenomeno.id = %(pk_1)s
+2025-06-10 22:22:34,485 - INFO - [cached since 100.3s ago] {'pk_1': 4}
+2025-06-10 22:22:34,488 - INFO - Categoria criada: explicacao_possivel='Animais, encanamento antigo, acústica do ambiente' nome='Sons Inexplicáveis' popularidade=7 id=4 nivel_misterio=6
+2025-06-10 22:22:34,492 - INFO - ROLLBACK
+2025-06-10 22:22:42,482 - INFO - BEGIN (implicit)
+2025-06-10 22:22:42,482 - INFO - INSERT INTO categoriafenomeno (nome, explicacao_possivel, nivel_misterio, popularidade) VALUES (%(nome)s, %(explicacao_possivel)s, %(nivel_misterio)s, %(popularidade)s) RETURNING categoriafenomeno.id
+2025-06-10 22:22:42,482 - INFO - [cached since 108.3s ago] {'nome': 'Desaparecimentos Temporários', 'explicacao_possivel': 'Fugas, desorientação ou lapsos de memória', 'nivel_misterio': 9, 'popularidade': 10}
+2025-06-10 22:22:42,483 - INFO - COMMIT
+2025-06-10 22:22:42,485 - INFO - BEGIN (implicit)
+2025-06-10 22:22:42,486 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+WHERE categoriafenomeno.id = %(pk_1)s
+2025-06-10 22:22:42,486 - INFO - [cached since 108.3s ago] {'pk_1': 5}
+2025-06-10 22:22:42,487 - INFO - Categoria criada: explicacao_possivel='Fugas, desorientação ou lapsos de memória' nome='Desaparecimentos Temporários' popularidade=10 id=5 nivel_misterio=9
+2025-06-10 22:22:42,488 - INFO - ROLLBACK
+2025-06-10 22:22:50,262 - INFO - BEGIN (implicit)
+2025-06-10 22:22:50,262 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:22:50,262 - INFO - [cached since 205.4s ago] {'param_1': 10, 'param_2': 0}
+2025-06-10 22:22:50,263 - INFO - Listagem de categorias: página 1, limite 10
+2025-06-10 22:22:50,264 - INFO - ROLLBACK
+2025-06-10 22:23:06,475 - INFO - BEGIN (implicit)
+2025-06-10 22:23:06,476 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:23:06,476 - INFO - [cached since 221.6s ago] {'param_1': 2, 'param_2': 2}
+2025-06-10 22:23:06,477 - INFO - Listagem de categorias: página 2, limite 2
+2025-06-10 22:23:06,477 - INFO - ROLLBACK
+2025-06-10 22:23:22,900 - INFO - BEGIN (implicit)
+2025-06-10 22:23:22,900 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:23:22,900 - INFO - [cached since 238s ago] {'param_1': 2, 'param_2': 0}
+2025-06-10 22:23:22,901 - INFO - Listagem de categorias: página 1, limite 2
+2025-06-10 22:23:22,901 - INFO - ROLLBACK
+2025-06-10 22:23:26,496 - INFO - BEGIN (implicit)
+2025-06-10 22:23:26,496 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:23:26,496 - INFO - [cached since 241.6s ago] {'param_1': 2, 'param_2': 4}
+2025-06-10 22:23:26,497 - INFO - Listagem de categorias: página 3, limite 2
+2025-06-10 22:23:26,498 - INFO - ROLLBACK
+2025-06-10 22:23:33,544 - INFO - BEGIN (implicit)
+2025-06-10 22:23:33,544 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:23:33,544 - INFO - [cached since 248.7s ago] {'param_1': 10, 'param_2': 0}
+2025-06-10 22:23:33,545 - INFO - Listagem de categorias: página 1, limite 10
+2025-06-10 22:23:33,546 - INFO - ROLLBACK
+2025-06-10 22:23:49,086 - INFO - BEGIN (implicit)
+2025-06-10 22:23:49,087 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno
+2025-06-10 22:23:49,087 - INFO - [generated in 0.00022s] {}
+2025-06-10 22:23:49,087 - ERROR - Erro ao contar categorias: 'ScalarResult' object has no attribute 'count'
+2025-06-10 22:23:49,088 - INFO - ROLLBACK
+2025-06-10 22:26:05,503 - INFO - select pg_catalog.version()
+2025-06-10 22:26:05,503 - INFO - [raw sql] {}
+2025-06-10 22:26:05,504 - INFO - select current_schema()
+2025-06-10 22:26:05,504 - INFO - [raw sql] {}
+2025-06-10 22:26:05,504 - INFO - show standard_conforming_strings
+2025-06-10 22:26:05,504 - INFO - [raw sql] {}
+2025-06-10 22:26:05,505 - INFO - BEGIN (implicit)
+2025-06-10 22:26:05,508 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:05,508 - INFO - [generated in 0.00025s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:05,509 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:05,509 - INFO - [cached since 0.002067s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:05,510 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:05,510 - INFO - [cached since 0.003005s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:05,511 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:05,511 - INFO - [cached since 0.003666s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:05,512 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:05,512 - INFO - [cached since 0.004175s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:05,512 - INFO - COMMIT
+2025-06-10 22:26:10,884 - INFO - BEGIN (implicit)
+2025-06-10 22:26:10,896 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno
+2025-06-10 22:26:10,896 - INFO - [generated in 0.00021s] {}
+2025-06-10 22:26:10,897 - INFO - Quantidade de categorias: 5
+2025-06-10 22:26:10,898 - INFO - ROLLBACK
+2025-06-10 22:26:37,987 - INFO - select pg_catalog.version()
+2025-06-10 22:26:37,987 - INFO - [raw sql] {}
+2025-06-10 22:26:37,988 - INFO - select current_schema()
+2025-06-10 22:26:37,988 - INFO - [raw sql] {}
+2025-06-10 22:26:37,988 - INFO - show standard_conforming_strings
+2025-06-10 22:26:37,989 - INFO - [raw sql] {}
+2025-06-10 22:26:37,989 - INFO - BEGIN (implicit)
+2025-06-10 22:26:37,991 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:37,991 - INFO - [generated in 0.00018s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:37,992 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:37,993 - INFO - [cached since 0.001251s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:37,993 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:37,993 - INFO - [cached since 0.001816s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:37,994 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:37,994 - INFO - [cached since 0.002384s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:37,994 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:37,994 - INFO - [cached since 0.002976s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:37,995 - INFO - COMMIT
+2025-06-10 22:26:55,959 - INFO - select pg_catalog.version()
+2025-06-10 22:26:55,959 - INFO - [raw sql] {}
+2025-06-10 22:26:55,960 - INFO - select current_schema()
+2025-06-10 22:26:55,960 - INFO - [raw sql] {}
+2025-06-10 22:26:55,960 - INFO - show standard_conforming_strings
+2025-06-10 22:26:55,960 - INFO - [raw sql] {}
+2025-06-10 22:26:55,961 - INFO - BEGIN (implicit)
+2025-06-10 22:26:55,963 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:55,963 - INFO - [generated in 0.00018s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:55,965 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:55,965 - INFO - [cached since 0.001522s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:55,965 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:55,966 - INFO - [cached since 0.00222s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:55,966 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:55,966 - INFO - [cached since 0.002799s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:55,967 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:26:55,967 - INFO - [cached since 0.003392s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:26:55,967 - INFO - COMMIT
+2025-06-10 22:27:10,198 - INFO - select pg_catalog.version()
+2025-06-10 22:27:10,198 - INFO - [raw sql] {}
+2025-06-10 22:27:10,199 - INFO - select current_schema()
+2025-06-10 22:27:10,199 - INFO - [raw sql] {}
+2025-06-10 22:27:10,199 - INFO - show standard_conforming_strings
+2025-06-10 22:27:10,199 - INFO - [raw sql] {}
+2025-06-10 22:27:10,200 - INFO - BEGIN (implicit)
+2025-06-10 22:27:10,202 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:27:10,202 - INFO - [generated in 0.00016s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:27:10,203 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:27:10,203 - INFO - [cached since 0.001219s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:27:10,204 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:27:10,204 - INFO - [cached since 0.001717s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:27:10,204 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:27:10,204 - INFO - [cached since 0.002215s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:27:10,205 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:27:10,205 - INFO - [cached since 0.002621s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:27:10,205 - INFO - COMMIT
+2025-06-10 22:27:25,663 - INFO - select pg_catalog.version()
+2025-06-10 22:27:25,663 - INFO - [raw sql] {}
+2025-06-10 22:27:25,664 - INFO - select current_schema()
+2025-06-10 22:27:25,664 - INFO - [raw sql] {}
+2025-06-10 22:27:25,664 - INFO - show standard_conforming_strings
+2025-06-10 22:27:25,664 - INFO - [raw sql] {}
+2025-06-10 22:27:25,665 - INFO - BEGIN (implicit)
+2025-06-10 22:27:25,667 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:27:25,668 - INFO - [generated in 0.00025s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:27:25,669 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:27:25,669 - INFO - [cached since 0.001743s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:27:25,670 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:27:25,670 - INFO - [cached since 0.002934s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:27:25,671 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:27:25,671 - INFO - [cached since 0.003656s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:27:25,671 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:27:25,671 - INFO - [cached since 0.004088s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:27:25,672 - INFO - COMMIT
+2025-06-10 22:29:34,075 - INFO - BEGIN (implicit)
+2025-06-10 22:29:34,089 - INFO - SELECT categoriafenomeno.id AS categoriafenomeno_id, categoriafenomeno.nome AS categoriafenomeno_nome, categoriafenomeno.explicacao_possivel AS categoriafenomeno_explicacao_possivel, categoriafenomeno.nivel_misterio AS categoriafenomeno_nivel_misterio, categoriafenomeno.popularidade AS categoriafenomeno_popularidade 
+FROM categoriafenomeno 
+WHERE categoriafenomeno.id = %(pk_1)s
+2025-06-10 22:29:34,089 - INFO - [generated in 0.00037s] {'pk_1': 1}
+2025-06-10 22:29:34,091 - INFO - Categoria obtida: nome='Aparições Fantasmagóricas' explicacao_possivel='Alucinação, truques de luz ou reflexos' popularidade=9 id=1 nivel_misterio=8
+2025-06-10 22:29:34,092 - INFO - ROLLBACK
+2025-06-10 22:29:38,295 - INFO - BEGIN (implicit)
+2025-06-10 22:29:38,296 - INFO - SELECT categoriafenomeno.id AS categoriafenomeno_id, categoriafenomeno.nome AS categoriafenomeno_nome, categoriafenomeno.explicacao_possivel AS categoriafenomeno_explicacao_possivel, categoriafenomeno.nivel_misterio AS categoriafenomeno_nivel_misterio, categoriafenomeno.popularidade AS categoriafenomeno_popularidade 
+FROM categoriafenomeno 
+WHERE categoriafenomeno.id = %(pk_1)s
+2025-06-10 22:29:38,296 - INFO - [cached since 4.207s ago] {'pk_1': 5}
+2025-06-10 22:29:38,296 - INFO - Categoria obtida: nome='Desaparecimentos Temporários' explicacao_possivel='Fugas, desorientação ou lapsos de memória' popularidade=10 id=5 nivel_misterio=9
+2025-06-10 22:29:38,297 - INFO - ROLLBACK
+2025-06-10 22:29:41,712 - INFO - BEGIN (implicit)
+2025-06-10 22:29:41,712 - INFO - SELECT categoriafenomeno.id AS categoriafenomeno_id, categoriafenomeno.nome AS categoriafenomeno_nome, categoriafenomeno.explicacao_possivel AS categoriafenomeno_explicacao_possivel, categoriafenomeno.nivel_misterio AS categoriafenomeno_nivel_misterio, categoriafenomeno.popularidade AS categoriafenomeno_popularidade 
+FROM categoriafenomeno 
+WHERE categoriafenomeno.id = %(pk_1)s
+2025-06-10 22:29:41,712 - INFO - [cached since 7.623s ago] {'pk_1': 6}
+2025-06-10 22:29:41,713 - ERROR - Categoria com ID 6 não encontrada
+2025-06-10 22:29:41,713 - ERROR - Erro ao obter categoria: 404: Categoria não encontrada
+2025-06-10 22:29:41,713 - INFO - ROLLBACK
+2025-06-10 22:33:02,541 - INFO - BEGIN (implicit)
+2025-06-10 22:33:02,542 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:33:02,542 - INFO - [generated in 0.00019s] {'param_1': 10, 'param_2': 0}
+2025-06-10 22:33:02,543 - INFO - Entidades listadas - página: 1, limite: 10
+2025-06-10 22:33:02,544 - INFO - ROLLBACK
+2025-06-10 22:33:10,403 - INFO - BEGIN (implicit)
+2025-06-10 22:33:10,405 - INFO - INSERT INTO entidadesobrenatural (nome, origem, periculosidade, descricao, aparicoes_confirmadas) VALUES (%(nome)s, %(origem)s, %(periculosidade)s, %(descricao)s, %(aparicoes_confirmadas)s) RETURNING entidadesobrenatural.id
+2025-06-10 22:33:10,405 - INFO - [generated in 0.00025s] {'nome': 'Dama de Branco', 'origem': 'Lenda urbana européia trazida por colonizadores', 'periculosidade': 'Média', 'descricao': 'Aparição espectral de uma mulher vestida de branco que vaga em locais isolados, geralmente associada a tragédias românticas.', 'aparicoes_confirmadas': 12}
+2025-06-10 22:33:10,407 - INFO - COMMIT
+2025-06-10 22:33:10,413 - INFO - BEGIN (implicit)
+2025-06-10 22:33:10,414 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+WHERE entidadesobrenatural.id = %(pk_1)s
+2025-06-10 22:33:10,415 - INFO - [generated in 0.00046s] {'pk_1': 1}
+2025-06-10 22:33:10,416 - INFO - Entidade criada: nome='Dama de Branco' origem='Lenda urbana européia trazida por colonizadores' descricao='Aparição espectral de uma mulher vestida de branco que vaga em locais isolados, geralmente associada a tragédias românticas.' periculosidade='Média' id=1 aparicoes_confirmadas=12
+2025-06-10 22:33:10,419 - INFO - ROLLBACK
+2025-06-10 22:33:16,788 - INFO - BEGIN (implicit)
+2025-06-10 22:33:16,788 - INFO - INSERT INTO entidadesobrenatural (nome, origem, periculosidade, descricao, aparicoes_confirmadas) VALUES (%(nome)s, %(origem)s, %(periculosidade)s, %(descricao)s, %(aparicoes_confirmadas)s) RETURNING entidadesobrenatural.id
+2025-06-10 22:33:16,788 - INFO - [cached since 6.383s ago] {'nome': 'O Homem do Saco', 'origem': 'Folclore infantil latino-americano', 'periculosidade': 'Alta', 'descricao': 'Figura sombria que sequestra crianças desobedientes. Usado como ameaça por adultos.', 'aparicoes_confirmadas': 7}
+2025-06-10 22:33:16,789 - INFO - COMMIT
+2025-06-10 22:33:16,790 - INFO - BEGIN (implicit)
+2025-06-10 22:33:16,791 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+WHERE entidadesobrenatural.id = %(pk_1)s
+2025-06-10 22:33:16,791 - INFO - [cached since 6.377s ago] {'pk_1': 2}
+2025-06-10 22:33:16,791 - INFO - Entidade criada: nome='O Homem do Saco' origem='Folclore infantil latino-americano' descricao='Figura sombria que sequestra crianças desobedientes. Usado como ameaça por adultos.' periculosidade='Alta' id=2 aparicoes_confirmadas=7
+2025-06-10 22:33:16,792 - INFO - ROLLBACK
+2025-06-10 22:33:24,815 - INFO - BEGIN (implicit)
+2025-06-10 22:33:24,816 - INFO - INSERT INTO entidadesobrenatural (nome, origem, periculosidade, descricao, aparicoes_confirmadas) VALUES (%(nome)s, %(origem)s, %(periculosidade)s, %(descricao)s, %(aparicoes_confirmadas)s) RETURNING entidadesobrenatural.id
+2025-06-10 22:33:24,816 - INFO - [cached since 14.41s ago] {'nome': 'Chupa-Cabra', 'origem': 'Regiões rurais da América Latina', 'periculosidade': 'Alta', 'descricao': 'Criatura que supostamente suga o sangue de animais. Descrita como de olhos vermelhos e pele escamosa.', 'aparicoes_confirmadas': 23}
+2025-06-10 22:33:24,817 - INFO - COMMIT
+2025-06-10 22:33:24,819 - INFO - BEGIN (implicit)
+2025-06-10 22:33:24,819 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+WHERE entidadesobrenatural.id = %(pk_1)s
+2025-06-10 22:33:24,819 - INFO - [cached since 14.4s ago] {'pk_1': 3}
+2025-06-10 22:33:24,820 - INFO - Entidade criada: nome='Chupa-Cabra' origem='Regiões rurais da América Latina' descricao='Criatura que supostamente suga o sangue de animais. Descrita como de olhos vermelhos e pele escamosa.' periculosidade='Alta' id=3 aparicoes_confirmadas=23
+2025-06-10 22:33:24,820 - INFO - ROLLBACK
+2025-06-10 22:33:33,121 - INFO - BEGIN (implicit)
+2025-06-10 22:33:33,121 - INFO - INSERT INTO entidadesobrenatural (nome, origem, periculosidade, descricao, aparicoes_confirmadas) VALUES (%(nome)s, %(origem)s, %(periculosidade)s, %(descricao)s, %(aparicoes_confirmadas)s) RETURNING entidadesobrenatural.id
+2025-06-10 22:33:33,121 - INFO - [cached since 22.72s ago] {'nome': 'Boneca Amaldiçoada', 'origem': 'Relato doméstico dos anos 80', 'periculosidade': 'Baixa', 'descricao': 'Objeto que se move sozinho, emite sons e causa desconforto em quem permanece próximo por muito tempo.', 'aparicoes_confirmadas': 5}
+2025-06-10 22:33:33,122 - INFO - COMMIT
+2025-06-10 22:33:33,124 - INFO - BEGIN (implicit)
+2025-06-10 22:33:33,124 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+WHERE entidadesobrenatural.id = %(pk_1)s
+2025-06-10 22:33:33,124 - INFO - [cached since 22.71s ago] {'pk_1': 4}
+2025-06-10 22:33:33,125 - INFO - Entidade criada: nome='Boneca Amaldiçoada' origem='Relato doméstico dos anos 80' descricao='Objeto que se move sozinho, emite sons e causa desconforto em quem permanece próximo por muito tempo.' periculosidade='Baixa' id=4 aparicoes_confirmadas=5
+2025-06-10 22:33:33,126 - INFO - ROLLBACK
+2025-06-10 22:33:42,204 - INFO - BEGIN (implicit)
+2025-06-10 22:33:42,204 - INFO - INSERT INTO entidadesobrenatural (nome, origem, periculosidade, descricao, aparicoes_confirmadas) VALUES (%(nome)s, %(origem)s, %(periculosidade)s, %(descricao)s, %(aparicoes_confirmadas)s) RETURNING entidadesobrenatural.id
+2025-06-10 22:33:42,205 - INFO - [cached since 31.8s ago] {'nome': 'Sombra do Corredor', 'origem': 'Instituições abandonadas no interior', 'periculosidade': 'Variável', 'descricao': 'Silhueta escura que aparece no fim de corredores vazios. Desaparece quando observada diretamente.', 'aparicoes_confirmadas': 14}
+2025-06-10 22:33:42,205 - INFO - COMMIT
+2025-06-10 22:33:42,207 - INFO - BEGIN (implicit)
+2025-06-10 22:33:42,208 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+WHERE entidadesobrenatural.id = %(pk_1)s
+2025-06-10 22:33:42,208 - INFO - [cached since 31.79s ago] {'pk_1': 5}
+2025-06-10 22:33:42,209 - INFO - Entidade criada: nome='Sombra do Corredor' origem='Instituições abandonadas no interior' descricao='Silhueta escura que aparece no fim de corredores vazios. Desaparece quando observada diretamente.' periculosidade='Variável' id=5 aparicoes_confirmadas=14
+2025-06-10 22:33:42,209 - INFO - ROLLBACK
+2025-06-10 22:33:50,800 - INFO - BEGIN (implicit)
+2025-06-10 22:33:50,801 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:33:50,801 - INFO - [cached since 48.26s ago] {'param_1': 10, 'param_2': 0}
+2025-06-10 22:33:50,801 - INFO - Entidades listadas - página: 1, limite: 10
+2025-06-10 22:33:50,803 - INFO - ROLLBACK
+2025-06-10 22:34:02,369 - INFO - BEGIN (implicit)
+2025-06-10 22:34:02,370 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural
+2025-06-10 22:34:02,370 - INFO - [generated in 0.00014s] {}
+2025-06-10 22:34:02,371 - ERROR - Erro ao contar entidades: object of type 'method' has no len()
+2025-06-10 22:34:02,371 - INFO - ROLLBACK
+2025-06-10 22:34:13,510 - INFO - select pg_catalog.version()
+2025-06-10 22:34:13,510 - INFO - [raw sql] {}
+2025-06-10 22:34:13,510 - INFO - select current_schema()
+2025-06-10 22:34:13,510 - INFO - [raw sql] {}
+2025-06-10 22:34:13,511 - INFO - show standard_conforming_strings
+2025-06-10 22:34:13,511 - INFO - [raw sql] {}
+2025-06-10 22:34:13,511 - INFO - BEGIN (implicit)
+2025-06-10 22:34:13,514 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:34:13,514 - INFO - [generated in 0.00026s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:34:13,515 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:34:13,516 - INFO - [cached since 0.002093s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:34:13,516 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:34:13,516 - INFO - [cached since 0.002948s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:34:13,517 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:34:13,517 - INFO - [cached since 0.00369s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:34:13,518 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:34:13,518 - INFO - [cached since 0.004191s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:34:13,518 - INFO - COMMIT
+2025-06-10 22:34:14,014 - INFO - BEGIN (implicit)
+2025-06-10 22:34:14,025 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural
+2025-06-10 22:34:14,025 - INFO - [generated in 0.00022s] {}
+2025-06-10 22:34:14,026 - INFO - Quantidade de entidades: 5
+2025-06-10 22:34:14,027 - INFO - ROLLBACK
+2025-06-10 22:34:20,731 - INFO - BEGIN (implicit)
+2025-06-10 22:34:20,732 - INFO - SELECT entidadesobrenatural.id AS entidadesobrenatural_id, entidadesobrenatural.nome AS entidadesobrenatural_nome, entidadesobrenatural.origem AS entidadesobrenatural_origem, entidadesobrenatural.periculosidade AS entidadesobrenatural_periculosidade, entidadesobrenatural.descricao AS entidadesobrenatural_descricao, entidadesobrenatural.aparicoes_confirmadas AS entidadesobrenatural_aparicoes_confirmadas 
+FROM entidadesobrenatural 
+WHERE entidadesobrenatural.id = %(pk_1)s
+2025-06-10 22:34:20,732 - INFO - [generated in 0.00018s] {'pk_1': 2}
+2025-06-10 22:34:20,733 - INFO - Entidade obtida: nome='O Homem do Saco' origem='Folclore infantil latino-americano' descricao='Figura sombria que sequestra crianças desobedientes. Usado como ameaça por adultos.' periculosidade='Alta' id=2 aparicoes_confirmadas=7
+2025-06-10 22:34:20,735 - INFO - ROLLBACK
+2025-06-10 22:44:02,353 - INFO - BEGIN (implicit)
+2025-06-10 22:44:02,355 - INFO - INSERT INTO relato (titulo, descricao, data_ocorrencia, localizacao, tipo_fenomeno, categoria_id, entidade_id) VALUES (%(titulo)s, %(descricao)s, %(data_ocorrencia)s, %(localizacao)s, %(tipo_fenomeno)s, %(categoria_id)s, %(entidade_id)s) RETURNING relato.id
+2025-06-10 22:44:02,355 - INFO - [generated in 0.00027s] {'titulo': 'Aparição no Hospital Abandonado', 'descricao': 'Uma figura feminina flutuava pelos corredores enquanto janelas batiam sem vento.', 'data_ocorrencia': datetime.date(2023, 9, 12), 'localizacao': 'Hospital São Miguel - Zona Norte', 'tipo_fenomeno': 'Aparição Espiritual', 'categoria_id': 1, 'entidade_id': 1}
+2025-06-10 22:44:02,357 - INFO - COMMIT
+2025-06-10 22:44:02,360 - INFO - BEGIN (implicit)
+2025-06-10 22:44:02,361 - INFO - SELECT relato.id, relato.titulo, relato.descricao, relato.data_ocorrencia, relato.localizacao, relato.tipo_fenomeno, relato.categoria_id, relato.entidade_id 
+FROM relato 
+WHERE relato.id = %(pk_1)s
+2025-06-10 22:44:02,361 - INFO - [generated in 0.00028s] {'pk_1': 1}
+2025-06-10 22:44:02,362 - INFO - Relato criado: titulo='Aparição no Hospital Abandonado' descricao='Uma figura feminina flutuava pelos corredores enquanto janelas batiam sem vento.' localizacao='Hospital São Miguel - Zona Norte' categoria_id=1 id=1 data_ocorrencia=datetime.date(2023, 9, 12) tipo_fenomeno='Aparição Espiritual' entidade_id=1
+2025-06-10 22:44:02,363 - INFO - ROLLBACK
+2025-06-10 22:44:14,127 - INFO - BEGIN (implicit)
+2025-06-10 22:44:14,127 - INFO - INSERT INTO relato (titulo, descricao, data_ocorrencia, localizacao, tipo_fenomeno, categoria_id, entidade_id) VALUES (%(titulo)s, %(descricao)s, %(data_ocorrencia)s, %(localizacao)s, %(tipo_fenomeno)s, %(categoria_id)s, %(entidade_id)s) RETURNING relato.id
+2025-06-10 22:44:14,127 - INFO - [cached since 11.77s ago] {'titulo': 'Cabra sem Sangue no Celeiro', 'descricao': 'Pela manhã, todos os animais estavam mortos e sem uma gota de sangue no corpo.', 'data_ocorrencia': datetime.date(2022, 3, 5), 'localizacao': 'Zona Rural de Quixadá', 'tipo_fenomeno': 'Ataque Inexplicável', 'categoria_id': 2, 'entidade_id': 3}
+2025-06-10 22:44:14,128 - INFO - COMMIT
+2025-06-10 22:44:14,131 - INFO - BEGIN (implicit)
+2025-06-10 22:44:14,131 - INFO - SELECT relato.id, relato.titulo, relato.descricao, relato.data_ocorrencia, relato.localizacao, relato.tipo_fenomeno, relato.categoria_id, relato.entidade_id 
+FROM relato 
+WHERE relato.id = %(pk_1)s
+2025-06-10 22:44:14,131 - INFO - [cached since 11.77s ago] {'pk_1': 2}
+2025-06-10 22:44:14,133 - INFO - Relato criado: titulo='Cabra sem Sangue no Celeiro' descricao='Pela manhã, todos os animais estavam mortos e sem uma gota de sangue no corpo.' localizacao='Zona Rural de Quixadá' categoria_id=2 id=2 data_ocorrencia=datetime.date(2022, 3, 5) tipo_fenomeno='Ataque Inexplicável' entidade_id=3
+2025-06-10 22:44:14,139 - INFO - ROLLBACK
+2025-06-10 22:44:21,509 - INFO - BEGIN (implicit)
+2025-06-10 22:44:21,510 - INFO - INSERT INTO relato (titulo, descricao, data_ocorrencia, localizacao, tipo_fenomeno, categoria_id, entidade_id) VALUES (%(titulo)s, %(descricao)s, %(data_ocorrencia)s, %(localizacao)s, %(tipo_fenomeno)s, %(categoria_id)s, %(entidade_id)s) RETURNING relato.id
+2025-06-10 22:44:21,510 - INFO - [cached since 19.15s ago] {'titulo': 'Boneca Mexe os Olhos Sozinha', 'descricao': 'Durante a madrugada, uma câmera captou a boneca movendo os olhos para a porta.', 'data_ocorrencia': datetime.date(2024, 1, 22), 'localizacao': 'Residência na Vila Nova', 'tipo_fenomeno': 'Objeto Ativo', 'categoria_id': 3, 'entidade_id': 4}
+2025-06-10 22:44:21,510 - INFO - COMMIT
+2025-06-10 22:44:21,513 - INFO - BEGIN (implicit)
+2025-06-10 22:44:21,513 - INFO - SELECT relato.id, relato.titulo, relato.descricao, relato.data_ocorrencia, relato.localizacao, relato.tipo_fenomeno, relato.categoria_id, relato.entidade_id 
+FROM relato 
+WHERE relato.id = %(pk_1)s
+2025-06-10 22:44:21,514 - INFO - [cached since 19.15s ago] {'pk_1': 3}
+2025-06-10 22:44:21,515 - INFO - Relato criado: titulo='Boneca Mexe os Olhos Sozinha' descricao='Durante a madrugada, uma câmera captou a boneca movendo os olhos para a porta.' localizacao='Residência na Vila Nova' categoria_id=3 id=3 data_ocorrencia=datetime.date(2024, 1, 22) tipo_fenomeno='Objeto Ativo' entidade_id=4
+2025-06-10 22:44:21,516 - INFO - ROLLBACK
+2025-06-10 22:44:29,844 - INFO - BEGIN (implicit)
+2025-06-10 22:44:29,845 - INFO - INSERT INTO relato (titulo, descricao, data_ocorrencia, localizacao, tipo_fenomeno, categoria_id, entidade_id) VALUES (%(titulo)s, %(descricao)s, %(data_ocorrencia)s, %(localizacao)s, %(tipo_fenomeno)s, %(categoria_id)s, %(entidade_id)s) RETURNING relato.id
+2025-06-10 22:44:29,845 - INFO - [cached since 27.49s ago] {'titulo': 'Silhueta Escura no Corredor', 'descricao': 'Seguranças noturnos relataram presença constante de sombra no corredor da escola.', 'data_ocorrencia': datetime.date(2023, 6, 17), 'localizacao': 'Escola Técnica Estadual - Bloco C', 'tipo_fenomeno': 'Sombra Paranormal', 'categoria_id': 4, 'entidade_id': 5}
+2025-06-10 22:44:29,846 - INFO - COMMIT
+2025-06-10 22:44:29,848 - INFO - BEGIN (implicit)
+2025-06-10 22:44:29,848 - INFO - SELECT relato.id, relato.titulo, relato.descricao, relato.data_ocorrencia, relato.localizacao, relato.tipo_fenomeno, relato.categoria_id, relato.entidade_id 
+FROM relato 
+WHERE relato.id = %(pk_1)s
+2025-06-10 22:44:29,848 - INFO - [cached since 27.49s ago] {'pk_1': 4}
+2025-06-10 22:44:29,849 - INFO - Relato criado: titulo='Silhueta Escura no Corredor' descricao='Seguranças noturnos relataram presença constante de sombra no corredor da escola.' localizacao='Escola Técnica Estadual - Bloco C' categoria_id=4 id=4 data_ocorrencia=datetime.date(2023, 6, 17) tipo_fenomeno='Sombra Paranormal' entidade_id=5
+2025-06-10 22:44:29,850 - INFO - ROLLBACK
+2025-06-10 22:44:36,645 - INFO - BEGIN (implicit)
+2025-06-10 22:44:36,646 - INFO - INSERT INTO relato (titulo, descricao, data_ocorrencia, localizacao, tipo_fenomeno, categoria_id, entidade_id) VALUES (%(titulo)s, %(descricao)s, %(data_ocorrencia)s, %(localizacao)s, %(tipo_fenomeno)s, %(categoria_id)s, %(entidade_id)s) RETURNING relato.id
+2025-06-10 22:44:36,646 - INFO - [cached since 34.29s ago] {'titulo': 'Homem do Saco no Beco', 'descricao': 'Criança afirmou ter sido perseguida por um homem com saco nas costas e olhos vermelhos.', 'data_ocorrencia': datetime.date(2023, 10, 3), 'localizacao': 'Rua das Palmeiras, nº 112', 'tipo_fenomeno': 'Ameaça Infantil', 'categoria_id': 5, 'entidade_id': 2}
+2025-06-10 22:44:36,646 - INFO - COMMIT
+2025-06-10 22:44:36,649 - INFO - BEGIN (implicit)
+2025-06-10 22:44:36,650 - INFO - SELECT relato.id, relato.titulo, relato.descricao, relato.data_ocorrencia, relato.localizacao, relato.tipo_fenomeno, relato.categoria_id, relato.entidade_id 
+FROM relato 
+WHERE relato.id = %(pk_1)s
+2025-06-10 22:44:36,650 - INFO - [cached since 34.29s ago] {'pk_1': 5}
+2025-06-10 22:44:36,651 - INFO - Relato criado: titulo='Homem do Saco no Beco' descricao='Criança afirmou ter sido perseguida por um homem com saco nas costas e olhos vermelhos.' localizacao='Rua das Palmeiras, nº 112' categoria_id=5 id=5 data_ocorrencia=datetime.date(2023, 10, 3) tipo_fenomeno='Ameaça Infantil' entidade_id=2
+2025-06-10 22:44:36,652 - INFO - ROLLBACK
+2025-06-10 22:44:46,425 - INFO - BEGIN (implicit)
+2025-06-10 22:44:46,426 - INFO - SELECT relato.id, relato.titulo, relato.descricao, relato.data_ocorrencia, relato.localizacao, relato.tipo_fenomeno, relato.categoria_id, relato.entidade_id 
+FROM relato 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:44:46,426 - INFO - [generated in 0.00015s] {'param_1': 10, 'param_2': 0}
+2025-06-10 22:44:46,427 - INFO - Listagem de relatos: página 1, limite 10
+2025-06-10 22:44:46,429 - INFO - ROLLBACK
+2025-06-10 22:44:54,876 - INFO - BEGIN (implicit)
+2025-06-10 22:44:54,877 - INFO - SELECT relato.id, relato.titulo, relato.descricao, relato.data_ocorrencia, relato.localizacao, relato.tipo_fenomeno, relato.categoria_id, relato.entidade_id 
+FROM relato
+2025-06-10 22:44:54,877 - INFO - [generated in 0.00014s] {}
+2025-06-10 22:44:54,878 - INFO - Quantidade de relatos: 5
+2025-06-10 22:44:54,878 - INFO - ROLLBACK
+2025-06-10 22:45:29,180 - INFO - BEGIN (implicit)
+2025-06-10 22:45:29,181 - INFO - SELECT testemunha.id, testemunha.nome, testemunha.idade, testemunha.credibilidade, testemunha.tipo_relacao, testemunha.experiencia_previa, testemunha.relato_id 
+FROM testemunha 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:45:29,181 - INFO - [generated in 0.00017s] {'param_1': 10, 'param_2': 0}
+2025-06-10 22:45:29,182 - INFO - Listagem paginada de testemunhas: página 1, limite 10
+2025-06-10 22:45:29,183 - INFO - ROLLBACK
+2025-06-10 22:45:37,423 - INFO - BEGIN (implicit)
+2025-06-10 22:45:37,423 - INFO - INSERT INTO testemunha (nome, idade, credibilidade, tipo_relacao, experiencia_previa, relato_id) VALUES (%(nome)s, %(idade)s, %(credibilidade)s, %(tipo_relacao)s, %(experiencia_previa)s, %(relato_id)s) RETURNING testemunha.id
+2025-06-10 22:45:37,424 - INFO - [generated in 0.00018s] {'nome': 'Carlos da Silva', 'idade': '42', 'credibilidade': 8, 'tipo_relacao': 'Funcionário do hospital', 'experiencia_previa': True, 'relato_id': 1}
+2025-06-10 22:45:37,425 - INFO - COMMIT
+2025-06-10 22:45:37,428 - INFO - BEGIN (implicit)
+2025-06-10 22:45:37,428 - INFO - SELECT testemunha.id, testemunha.nome, testemunha.idade, testemunha.credibilidade, testemunha.tipo_relacao, testemunha.experiencia_previa, testemunha.relato_id 
+FROM testemunha 
+WHERE testemunha.id = %(pk_1)s
+2025-06-10 22:45:37,429 - INFO - [generated in 0.00019s] {'pk_1': 1}
+2025-06-10 22:45:37,429 - INFO - Testemunha criada: credibilidade=8 id=1 experiencia_previa=True nome='Carlos da Silva' idade='42' tipo_relacao='Funcionário do hospital' relato_id=1
+2025-06-10 22:45:37,430 - INFO - ROLLBACK
+2025-06-10 22:45:48,243 - INFO - BEGIN (implicit)
+2025-06-10 22:45:48,244 - INFO - INSERT INTO testemunha (nome, idade, credibilidade, tipo_relacao, experiencia_previa, relato_id) VALUES (%(nome)s, %(idade)s, %(credibilidade)s, %(tipo_relacao)s, %(experiencia_previa)s, %(relato_id)s) RETURNING testemunha.id
+2025-06-10 22:45:48,244 - INFO - [cached since 10.82s ago] {'nome': 'Mariana Torres', 'idade': '17', 'credibilidade': 6, 'tipo_relacao': 'Filha do fazendeiro', 'experiencia_previa': False, 'relato_id': 2}
+2025-06-10 22:45:48,245 - INFO - COMMIT
+2025-06-10 22:45:48,246 - INFO - BEGIN (implicit)
+2025-06-10 22:45:48,247 - INFO - SELECT testemunha.id, testemunha.nome, testemunha.idade, testemunha.credibilidade, testemunha.tipo_relacao, testemunha.experiencia_previa, testemunha.relato_id 
+FROM testemunha 
+WHERE testemunha.id = %(pk_1)s
+2025-06-10 22:45:48,247 - INFO - [cached since 10.82s ago] {'pk_1': 2}
+2025-06-10 22:45:48,247 - INFO - Testemunha criada: credibilidade=6 id=2 experiencia_previa=False nome='Mariana Torres' idade='17' tipo_relacao='Filha do fazendeiro' relato_id=2
+2025-06-10 22:45:48,248 - INFO - ROLLBACK
+2025-06-10 22:45:53,763 - INFO - BEGIN (implicit)
+2025-06-10 22:45:53,763 - INFO - INSERT INTO testemunha (nome, idade, credibilidade, tipo_relacao, experiencia_previa, relato_id) VALUES (%(nome)s, %(idade)s, %(credibilidade)s, %(tipo_relacao)s, %(experiencia_previa)s, %(relato_id)s) RETURNING testemunha.id
+2025-06-10 22:45:53,763 - INFO - [cached since 16.34s ago] {'nome': 'Joana Rocha', 'idade': '29', 'credibilidade': 9, 'tipo_relacao': 'Moradora da casa', 'experiencia_previa': True, 'relato_id': 3}
+2025-06-10 22:45:53,764 - INFO - COMMIT
+2025-06-10 22:45:53,766 - INFO - BEGIN (implicit)
+2025-06-10 22:45:53,766 - INFO - SELECT testemunha.id, testemunha.nome, testemunha.idade, testemunha.credibilidade, testemunha.tipo_relacao, testemunha.experiencia_previa, testemunha.relato_id 
+FROM testemunha 
+WHERE testemunha.id = %(pk_1)s
+2025-06-10 22:45:53,766 - INFO - [cached since 16.34s ago] {'pk_1': 3}
+2025-06-10 22:45:53,767 - INFO - Testemunha criada: credibilidade=9 id=3 experiencia_previa=True nome='Joana Rocha' idade='29' tipo_relacao='Moradora da casa' relato_id=3
+2025-06-10 22:45:53,768 - INFO - ROLLBACK
+2025-06-10 22:46:01,412 - INFO - BEGIN (implicit)
+2025-06-10 22:46:01,413 - INFO - INSERT INTO testemunha (nome, idade, credibilidade, tipo_relacao, experiencia_previa, relato_id) VALUES (%(nome)s, %(idade)s, %(credibilidade)s, %(tipo_relacao)s, %(experiencia_previa)s, %(relato_id)s) RETURNING testemunha.id
+2025-06-10 22:46:01,413 - INFO - [cached since 23.99s ago] {'nome': 'Antônio Bezerra', 'idade': '51', 'credibilidade': 7, 'tipo_relacao': 'Vigilante noturno', 'experiencia_previa': True, 'relato_id': 4}
+2025-06-10 22:46:01,414 - INFO - COMMIT
+2025-06-10 22:46:01,420 - INFO - BEGIN (implicit)
+2025-06-10 22:46:01,420 - INFO - SELECT testemunha.id, testemunha.nome, testemunha.idade, testemunha.credibilidade, testemunha.tipo_relacao, testemunha.experiencia_previa, testemunha.relato_id 
+FROM testemunha 
+WHERE testemunha.id = %(pk_1)s
+2025-06-10 22:46:01,420 - INFO - [cached since 23.99s ago] {'pk_1': 4}
+2025-06-10 22:46:01,421 - INFO - Testemunha criada: credibilidade=7 id=4 experiencia_previa=True nome='Antônio Bezerra' idade='51' tipo_relacao='Vigilante noturno' relato_id=4
+2025-06-10 22:46:01,424 - INFO - ROLLBACK
+2025-06-10 22:46:07,051 - INFO - BEGIN (implicit)
+2025-06-10 22:46:07,051 - INFO - INSERT INTO testemunha (nome, idade, credibilidade, tipo_relacao, experiencia_previa, relato_id) VALUES (%(nome)s, %(idade)s, %(credibilidade)s, %(tipo_relacao)s, %(experiencia_previa)s, %(relato_id)s) RETURNING testemunha.id
+2025-06-10 22:46:07,051 - INFO - [cached since 29.63s ago] {'nome': 'Luciana Menezes', 'idade': '10', 'credibilidade': 5, 'tipo_relacao': 'Criança vizinha', 'experiencia_previa': False, 'relato_id': 5}
+2025-06-10 22:46:07,052 - INFO - COMMIT
+2025-06-10 22:46:07,054 - INFO - BEGIN (implicit)
+2025-06-10 22:46:07,054 - INFO - SELECT testemunha.id, testemunha.nome, testemunha.idade, testemunha.credibilidade, testemunha.tipo_relacao, testemunha.experiencia_previa, testemunha.relato_id 
+FROM testemunha 
+WHERE testemunha.id = %(pk_1)s
+2025-06-10 22:46:07,054 - INFO - [cached since 29.63s ago] {'pk_1': 5}
+2025-06-10 22:46:07,055 - INFO - Testemunha criada: credibilidade=5 id=5 experiencia_previa=False nome='Luciana Menezes' idade='10' tipo_relacao='Criança vizinha' relato_id=5
+2025-06-10 22:46:07,059 - INFO - ROLLBACK
+2025-06-10 22:46:18,161 - INFO - BEGIN (implicit)
+2025-06-10 22:46:18,162 - INFO - SELECT testemunha.id, testemunha.nome, testemunha.idade, testemunha.credibilidade, testemunha.tipo_relacao, testemunha.experiencia_previa, testemunha.relato_id 
+FROM testemunha 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:46:18,162 - INFO - [cached since 48.98s ago] {'param_1': 10, 'param_2': 0}
+2025-06-10 22:46:18,162 - INFO - Listagem paginada de testemunhas: página 1, limite 10
+2025-06-10 22:46:18,163 - INFO - ROLLBACK
+2025-06-10 22:46:29,782 - INFO - BEGIN (implicit)
+2025-06-10 22:46:29,782 - INFO - SELECT testemunha.id, testemunha.nome, testemunha.idade, testemunha.credibilidade, testemunha.tipo_relacao, testemunha.experiencia_previa, testemunha.relato_id 
+FROM testemunha
+2025-06-10 22:46:29,783 - INFO - [generated in 0.00015s] {}
+2025-06-10 22:46:29,783 - INFO - Quantidade de testemunhas: 5
+2025-06-10 22:46:29,784 - INFO - ROLLBACK
+2025-06-10 22:47:15,861 - INFO - BEGIN (implicit)
+2025-06-10 22:47:15,862 - INFO - INSERT INTO registromultimidia (tipo, url, data_registro, legenda, relato_id) VALUES (%(tipo)s, %(url)s, %(data_registro)s, %(legenda)s, %(relato_id)s) RETURNING registromultimidia.id
+2025-06-10 22:47:15,862 - INFO - [generated in 0.00019s] {'tipo': 'foto', 'url': 'https://example.com/foto-hospital.jpg', 'data_registro': datetime.datetime(2023, 7, 21, 22, 15), 'legenda': 'Registro capturado no corredor do hospital onde a entidade apareceu.', 'relato_id': 1}
+2025-06-10 22:47:15,864 - INFO - COMMIT
+2025-06-10 22:47:15,866 - INFO - BEGIN (implicit)
+2025-06-10 22:47:15,867 - INFO - SELECT registromultimidia.id, registromultimidia.tipo, registromultimidia.url, registromultimidia.data_registro, registromultimidia.legenda, registromultimidia.relato_id 
+FROM registromultimidia 
+WHERE registromultimidia.id = %(pk_1)s
+2025-06-10 22:47:15,867 - INFO - [generated in 0.00023s] {'pk_1': 1}
+2025-06-10 22:47:15,868 - INFO - Registro criado: url='https://example.com/foto-hospital.jpg' tipo='foto' legenda='Registro capturado no corredor do hospital onde a entidade apareceu.' id=1 data_registro=datetime.datetime(2023, 7, 21, 22, 15) relato_id=1
+2025-06-10 22:47:15,870 - INFO - ROLLBACK
+2025-06-10 22:47:21,558 - INFO - BEGIN (implicit)
+2025-06-10 22:47:21,559 - INFO - INSERT INTO registromultimidia (tipo, url, data_registro, legenda, relato_id) VALUES (%(tipo)s, %(url)s, %(data_registro)s, %(legenda)s, %(relato_id)s) RETURNING registromultimidia.id
+2025-06-10 22:47:21,559 - INFO - [cached since 5.697s ago] {'tipo': 'áudio', 'url': 'https://example.com/audio-grito.mp3', 'data_registro': datetime.datetime(2023, 8, 3, 3, 47), 'legenda': 'Grito gravado durante a madrugada na plantação.', 'relato_id': 2}
+2025-06-10 22:47:21,560 - INFO - COMMIT
+2025-06-10 22:47:21,562 - INFO - BEGIN (implicit)
+2025-06-10 22:47:21,566 - INFO - SELECT registromultimidia.id, registromultimidia.tipo, registromultimidia.url, registromultimidia.data_registro, registromultimidia.legenda, registromultimidia.relato_id 
+FROM registromultimidia 
+WHERE registromultimidia.id = %(pk_1)s
+2025-06-10 22:47:21,566 - INFO - [cached since 5.699s ago] {'pk_1': 2}
+2025-06-10 22:47:21,568 - INFO - Registro criado: url='https://example.com/audio-grito.mp3' tipo='áudio' legenda='Grito gravado durante a madrugada na plantação.' id=2 data_registro=datetime.datetime(2023, 8, 3, 3, 47) relato_id=2
+2025-06-10 22:47:21,569 - INFO - ROLLBACK
+2025-06-10 22:47:27,317 - INFO - BEGIN (implicit)
+2025-06-10 22:47:27,317 - INFO - INSERT INTO registromultimidia (tipo, url, data_registro, legenda, relato_id) VALUES (%(tipo)s, %(url)s, %(data_registro)s, %(legenda)s, %(relato_id)s) RETURNING registromultimidia.id
+2025-06-10 22:47:27,317 - INFO - [cached since 11.45s ago] {'tipo': 'vídeo', 'url': 'https://example.com/video-sombra.mp4', 'data_registro': datetime.datetime(2023, 9, 11, 1, 3), 'legenda': 'Vídeo de uma sombra se movendo no interior da residência.', 'relato_id': 3}
+2025-06-10 22:47:27,318 - INFO - COMMIT
+2025-06-10 22:47:27,321 - INFO - BEGIN (implicit)
+2025-06-10 22:47:27,321 - INFO - SELECT registromultimidia.id, registromultimidia.tipo, registromultimidia.url, registromultimidia.data_registro, registromultimidia.legenda, registromultimidia.relato_id 
+FROM registromultimidia 
+WHERE registromultimidia.id = %(pk_1)s
+2025-06-10 22:47:27,321 - INFO - [cached since 11.45s ago] {'pk_1': 3}
+2025-06-10 22:47:27,322 - INFO - Registro criado: url='https://example.com/video-sombra.mp4' tipo='vídeo' legenda='Vídeo de uma sombra se movendo no interior da residência.' id=3 data_registro=datetime.datetime(2023, 9, 11, 1, 3) relato_id=3
+2025-06-10 22:47:27,323 - INFO - ROLLBACK
+2025-06-10 22:47:32,991 - INFO - BEGIN (implicit)
+2025-06-10 22:47:32,991 - INFO - INSERT INTO registromultimidia (tipo, url, data_registro, legenda, relato_id) VALUES (%(tipo)s, %(url)s, %(data_registro)s, %(legenda)s, %(relato_id)s) RETURNING registromultimidia.id
+2025-06-10 22:47:32,991 - INFO - [cached since 17.13s ago] {'tipo': 'foto', 'url': 'https://example.com/foto-pegada.jpg', 'data_registro': datetime.datetime(2023, 10, 19, 5, 30), 'legenda': 'Pegadas estranhas registradas perto do campo.', 'relato_id': 4}
+2025-06-10 22:47:32,992 - INFO - COMMIT
+2025-06-10 22:47:32,994 - INFO - BEGIN (implicit)
+2025-06-10 22:47:32,994 - INFO - SELECT registromultimidia.id, registromultimidia.tipo, registromultimidia.url, registromultimidia.data_registro, registromultimidia.legenda, registromultimidia.relato_id 
+FROM registromultimidia 
+WHERE registromultimidia.id = %(pk_1)s
+2025-06-10 22:47:32,994 - INFO - [cached since 17.13s ago] {'pk_1': 4}
+2025-06-10 22:47:32,995 - INFO - Registro criado: url='https://example.com/foto-pegada.jpg' tipo='foto' legenda='Pegadas estranhas registradas perto do campo.' id=4 data_registro=datetime.datetime(2023, 10, 19, 5, 30) relato_id=4
+2025-06-10 22:47:32,996 - INFO - ROLLBACK
+2025-06-10 22:47:43,706 - INFO - BEGIN (implicit)
+2025-06-10 22:47:43,706 - INFO - INSERT INTO registromultimidia (tipo, url, data_registro, legenda, relato_id) VALUES (%(tipo)s, %(url)s, %(data_registro)s, %(legenda)s, %(relato_id)s) RETURNING registromultimidia.id
+2025-06-10 22:47:43,706 - INFO - [cached since 27.84s ago] {'tipo': 'vídeo', 'url': 'https://example.com/video-boneca.mp4', 'data_registro': datetime.datetime(2023, 11, 5, 18, 0), 'legenda': 'Boneca se movendo sozinha na sala da casa abandonada.', 'relato_id': 5}
+2025-06-10 22:47:43,707 - INFO - COMMIT
+2025-06-10 22:47:43,716 - INFO - BEGIN (implicit)
+2025-06-10 22:47:43,717 - INFO - SELECT registromultimidia.id, registromultimidia.tipo, registromultimidia.url, registromultimidia.data_registro, registromultimidia.legenda, registromultimidia.relato_id 
+FROM registromultimidia 
+WHERE registromultimidia.id = %(pk_1)s
+2025-06-10 22:47:43,717 - INFO - [cached since 27.85s ago] {'pk_1': 5}
+2025-06-10 22:47:43,720 - INFO - Registro criado: url='https://example.com/video-boneca.mp4' tipo='vídeo' legenda='Boneca se movendo sozinha na sala da casa abandonada.' id=5 data_registro=datetime.datetime(2023, 11, 5, 18, 0) relato_id=5
+2025-06-10 22:47:43,721 - INFO - ROLLBACK
+2025-06-10 22:50:14,060 - INFO - BEGIN (implicit)
+2025-06-10 22:50:14,061 - INFO - SELECT testemunha.id, testemunha.nome, testemunha.idade, testemunha.credibilidade, testemunha.tipo_relacao, testemunha.experiencia_previa, testemunha.relato_id 
+FROM testemunha 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:50:14,061 - INFO - [cached since 284.9s ago] {'param_1': 10, 'param_2': 0}
+2025-06-10 22:50:14,061 - INFO - Listagem paginada de testemunhas: página 1, limite 10
+2025-06-10 22:50:14,063 - INFO - ROLLBACK
+2025-06-10 22:52:12,707 - INFO - select pg_catalog.version()
+2025-06-10 22:52:12,707 - INFO - [raw sql] {}
+2025-06-10 22:52:12,708 - INFO - select current_schema()
+2025-06-10 22:52:12,708 - INFO - [raw sql] {}
+2025-06-10 22:52:12,708 - INFO - show standard_conforming_strings
+2025-06-10 22:52:12,708 - INFO - [raw sql] {}
+2025-06-10 22:52:12,709 - INFO - BEGIN (implicit)
+2025-06-10 22:52:12,712 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:52:12,712 - INFO - [generated in 0.00017s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:52:12,713 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:52:12,713 - INFO - [cached since 0.001336s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:52:12,714 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:52:12,714 - INFO - [cached since 0.001875s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:52:12,714 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:52:12,714 - INFO - [cached since 0.00238s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:52:12,715 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:52:12,715 - INFO - [cached since 0.002836s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:52:12,715 - INFO - COMMIT
+2025-06-10 22:54:43,514 - INFO - BEGIN (implicit)
+2025-06-10 22:54:43,529 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:54:43,529 - INFO - [generated in 0.00022s] {'param_1': 10, 'param_2': 0}
+2025-06-10 22:54:43,530 - INFO - Listagem de categorias: página 1, limite 10
+2025-06-10 22:54:43,531 - INFO - ROLLBACK
+2025-06-10 22:56:43,701 - INFO - select pg_catalog.version()
+2025-06-10 22:56:43,701 - INFO - [raw sql] {}
+2025-06-10 22:56:43,702 - INFO - select current_schema()
+2025-06-10 22:56:43,703 - INFO - [raw sql] {}
+2025-06-10 22:56:43,703 - INFO - show standard_conforming_strings
+2025-06-10 22:56:43,703 - INFO - [raw sql] {}
+2025-06-10 22:56:43,704 - INFO - BEGIN (implicit)
+2025-06-10 22:56:43,706 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:56:43,706 - INFO - [generated in 0.00017s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:56:43,707 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:56:43,707 - INFO - [cached since 0.001423s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:56:43,708 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:56:43,708 - INFO - [cached since 0.002034s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:56:43,708 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:56:43,708 - INFO - [cached since 0.002439s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:56:43,709 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:56:43,709 - INFO - [cached since 0.002801s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:56:43,709 - INFO - COMMIT
+2025-06-10 22:56:50,084 - INFO - BEGIN (implicit)
+2025-06-10 22:56:50,096 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+WHERE (categoriafenomeno.nome LIKE '%%' || %(nome_1)s || '%%')
+2025-06-10 22:56:50,096 - INFO - [generated in 0.00041s] {'nome_1': 'objetos'}
+2025-06-10 22:56:50,098 - INFO - Filtro aplicado em categorias: {'nome': 'objetos'} - 0 resultados
+2025-06-10 22:56:50,099 - INFO - ROLLBACK
+2025-06-10 22:56:55,338 - INFO - BEGIN (implicit)
+2025-06-10 22:56:55,339 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+WHERE (categoriafenomeno.nome LIKE '%%' || %(nome_1)s || '%%')
+2025-06-10 22:56:55,339 - INFO - [cached since 5.244s ago] {'nome_1': 'Sons'}
+2025-06-10 22:56:55,340 - INFO - Filtro aplicado em categorias: {'nome': 'Sons'} - 1 resultados
+2025-06-10 22:56:55,341 - INFO - ROLLBACK
+2025-06-10 22:57:01,936 - INFO - BEGIN (implicit)
+2025-06-10 22:57:01,936 - INFO - SELECT categoriafenomeno.id, categoriafenomeno.nome, categoriafenomeno.explicacao_possivel, categoriafenomeno.nivel_misterio, categoriafenomeno.popularidade 
+FROM categoriafenomeno 
+WHERE (categoriafenomeno.nome LIKE '%%' || %(nome_1)s || '%%')
+2025-06-10 22:57:01,937 - INFO - [cached since 11.84s ago] {'nome_1': 'Objetos'}
+2025-06-10 22:57:01,937 - INFO - Filtro aplicado em categorias: {'nome': 'Objetos'} - 1 resultados
+2025-06-10 22:57:01,938 - INFO - ROLLBACK
+2025-06-10 22:57:14,559 - INFO - BEGIN (implicit)
+2025-06-10 22:57:14,560 - INFO - SELECT categoriafenomeno.id AS categoriafenomeno_id, categoriafenomeno.nome AS categoriafenomeno_nome, categoriafenomeno.explicacao_possivel AS categoriafenomeno_explicacao_possivel, categoriafenomeno.nivel_misterio AS categoriafenomeno_nivel_misterio, categoriafenomeno.popularidade AS categoriafenomeno_popularidade 
+FROM categoriafenomeno 
+WHERE categoriafenomeno.id = %(pk_1)s
+2025-06-10 22:57:14,560 - INFO - [generated in 0.00022s] {'pk_1': 1}
+2025-06-10 22:57:14,561 - INFO - Categoria obtida: nome='Aparições Fantasmagóricas' explicacao_possivel='Alucinação, truques de luz ou reflexos' popularidade=9 id=1 nivel_misterio=8
+2025-06-10 22:57:14,563 - INFO - ROLLBACK
+2025-06-10 22:57:17,900 - INFO - BEGIN (implicit)
+2025-06-10 22:57:17,901 - INFO - SELECT categoriafenomeno.id AS categoriafenomeno_id, categoriafenomeno.nome AS categoriafenomeno_nome, categoriafenomeno.explicacao_possivel AS categoriafenomeno_explicacao_possivel, categoriafenomeno.nivel_misterio AS categoriafenomeno_nivel_misterio, categoriafenomeno.popularidade AS categoriafenomeno_popularidade 
+FROM categoriafenomeno 
+WHERE categoriafenomeno.id = %(pk_1)s
+2025-06-10 22:57:17,901 - INFO - [cached since 3.341s ago] {'pk_1': 3}
+2025-06-10 22:57:17,901 - INFO - Categoria obtida: nome='Mudanças de Temperatura Súbitas' explicacao_possivel='Problemas no encanamento ou ventilação' popularidade=6 id=3 nivel_misterio=5
+2025-06-10 22:57:17,902 - INFO - ROLLBACK
+2025-06-10 22:57:55,787 - INFO - select pg_catalog.version()
+2025-06-10 22:57:55,787 - INFO - [raw sql] {}
+2025-06-10 22:57:55,788 - INFO - select current_schema()
+2025-06-10 22:57:55,788 - INFO - [raw sql] {}
+2025-06-10 22:57:55,788 - INFO - show standard_conforming_strings
+2025-06-10 22:57:55,788 - INFO - [raw sql] {}
+2025-06-10 22:57:55,789 - INFO - BEGIN (implicit)
+2025-06-10 22:57:55,792 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:57:55,793 - INFO - [generated in 0.00025s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:57:55,794 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:57:55,794 - INFO - [cached since 0.001829s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:57:55,794 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:57:55,795 - INFO - [cached since 0.002286s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:57:55,795 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:57:55,795 - INFO - [cached since 0.002774s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:57:55,795 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:57:55,795 - INFO - [cached since 0.003161s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:57:55,796 - INFO - COMMIT
+2025-06-10 22:58:07,055 - INFO - BEGIN (implicit)
+2025-06-10 22:58:07,068 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 22:58:07,068 - INFO - [generated in 0.00028s] {'param_1': 10, 'param_2': 0}
+2025-06-10 22:58:07,069 - INFO - Entidades listadas - página: 1, limite: 10
+2025-06-10 22:58:07,071 - INFO - ROLLBACK
+2025-06-10 22:58:12,923 - INFO - BEGIN (implicit)
+2025-06-10 22:58:12,924 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+WHERE (entidadesobrenatural.nome LIKE '%%' || %(nome_1)s || '%%')
+2025-06-10 22:58:12,924 - INFO - [generated in 0.00021s] {'nome_1': 'chupa'}
+2025-06-10 22:58:12,925 - INFO - Filtro aplicado em entidades: {'nome': 'chupa'} - 0 resultados
+2025-06-10 22:58:12,926 - INFO - ROLLBACK
+2025-06-10 22:58:16,647 - INFO - BEGIN (implicit)
+2025-06-10 22:58:16,647 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+WHERE (entidadesobrenatural.nome LIKE '%%' || %(nome_1)s || '%%')
+2025-06-10 22:58:16,648 - INFO - [cached since 3.724s ago] {'nome_1': 'Dama'}
+2025-06-10 22:58:16,648 - INFO - Filtro aplicado em entidades: {'nome': 'Dama'} - 1 resultados
+2025-06-10 22:58:16,649 - INFO - ROLLBACK
+2025-06-10 22:58:27,225 - INFO - BEGIN (implicit)
+2025-06-10 22:58:27,225 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+WHERE (entidadesobrenatural.nome LIKE '%%' || %(nome_1)s || '%%')
+2025-06-10 22:58:27,225 - INFO - [cached since 14.3s ago] {'nome_1': 'Chupa'}
+2025-06-10 22:58:27,226 - INFO - Filtro aplicado em entidades: {'nome': 'Chupa'} - 1 resultados
+2025-06-10 22:58:27,227 - INFO - ROLLBACK
+2025-06-10 22:58:32,535 - INFO - BEGIN (implicit)
+2025-06-10 22:58:32,535 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+WHERE (entidadesobrenatural.nome LIKE '%%' || %(nome_1)s || '%%')
+2025-06-10 22:58:32,535 - INFO - [cached since 19.61s ago] {'nome_1': 'Cabra'}
+2025-06-10 22:58:32,536 - INFO - Filtro aplicado em entidades: {'nome': 'Cabra'} - 1 resultados
+2025-06-10 22:58:32,537 - INFO - ROLLBACK
+2025-06-10 22:58:37,911 - INFO - BEGIN (implicit)
+2025-06-10 22:58:37,911 - INFO - SELECT entidadesobrenatural.id, entidadesobrenatural.nome, entidadesobrenatural.origem, entidadesobrenatural.periculosidade, entidadesobrenatural.descricao, entidadesobrenatural.aparicoes_confirmadas 
+FROM entidadesobrenatural 
+WHERE (entidadesobrenatural.nome LIKE '%%' || %(nome_1)s || '%%')
+2025-06-10 22:58:37,911 - INFO - [cached since 24.99s ago] {'nome_1': 'Branco'}
+2025-06-10 22:58:37,912 - INFO - Filtro aplicado em entidades: {'nome': 'Branco'} - 1 resultados
+2025-06-10 22:58:37,913 - INFO - ROLLBACK
+2025-06-10 22:59:15,517 - INFO - select pg_catalog.version()
+2025-06-10 22:59:15,518 - INFO - [raw sql] {}
+2025-06-10 22:59:15,519 - INFO - select current_schema()
+2025-06-10 22:59:15,519 - INFO - [raw sql] {}
+2025-06-10 22:59:15,520 - INFO - show standard_conforming_strings
+2025-06-10 22:59:15,520 - INFO - [raw sql] {}
+2025-06-10 22:59:15,521 - INFO - BEGIN (implicit)
+2025-06-10 22:59:15,525 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:59:15,525 - INFO - [generated in 0.00036s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:59:15,527 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:59:15,527 - INFO - [cached since 0.001797s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:59:15,527 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:59:15,527 - INFO - [cached since 0.00242s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:59:15,528 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:59:15,528 - INFO - [cached since 0.00287s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:59:15,528 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:59:15,528 - INFO - [cached since 0.003437s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:59:15,529 - INFO - COMMIT
+2025-06-10 22:59:40,425 - INFO - select pg_catalog.version()
+2025-06-10 22:59:40,425 - INFO - [raw sql] {}
+2025-06-10 22:59:40,426 - INFO - select current_schema()
+2025-06-10 22:59:40,426 - INFO - [raw sql] {}
+2025-06-10 22:59:40,426 - INFO - show standard_conforming_strings
+2025-06-10 22:59:40,426 - INFO - [raw sql] {}
+2025-06-10 22:59:40,426 - INFO - BEGIN (implicit)
+2025-06-10 22:59:40,430 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:59:40,430 - INFO - [generated in 0.00030s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:59:40,431 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:59:40,431 - INFO - [cached since 0.001754s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:59:40,432 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:59:40,432 - INFO - [cached since 0.002288s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:59:40,432 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:59:40,432 - INFO - [cached since 0.002701s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:59:40,432 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 22:59:40,433 - INFO - [cached since 0.003087s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 22:59:40,433 - INFO - COMMIT
+2025-06-10 23:00:05,791 - INFO - select pg_catalog.version()
+2025-06-10 23:00:05,791 - INFO - [raw sql] {}
+2025-06-10 23:00:05,792 - INFO - select current_schema()
+2025-06-10 23:00:05,792 - INFO - [raw sql] {}
+2025-06-10 23:00:05,792 - INFO - show standard_conforming_strings
+2025-06-10 23:00:05,792 - INFO - [raw sql] {}
+2025-06-10 23:00:05,793 - INFO - BEGIN (implicit)
+2025-06-10 23:00:05,795 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 23:00:05,795 - INFO - [generated in 0.00019s] {'table_name': 'categoriafenomeno', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 23:00:05,796 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 23:00:05,796 - INFO - [cached since 0.001303s ago] {'table_name': 'entidadesobrenatural', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 23:00:05,797 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 23:00:05,797 - INFO - [cached since 0.001888s ago] {'table_name': 'relato', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 23:00:05,797 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 23:00:05,798 - INFO - [cached since 0.002486s ago] {'table_name': 'testemunha', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 23:00:05,798 - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-06-10 23:00:05,798 - INFO - [cached since 0.002956s ago] {'table_name': 'registromultimidia', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2025-06-10 23:00:05,798 - INFO - COMMIT
+2025-06-10 23:00:33,548 - INFO - BEGIN (implicit)
+2025-06-10 23:00:33,564 - INFO - SELECT relato.id, relato.titulo, relato.descricao, relato.data_ocorrencia, relato.localizacao, relato.tipo_fenomeno, relato.categoria_id, relato.entidade_id 
+FROM relato 
+WHERE (relato.titulo LIKE '%%' || %(titulo_1)s || '%%')
+2025-06-10 23:00:33,564 - INFO - [generated in 0.00051s] {'titulo_1': 'Cabra'}
+2025-06-10 23:00:33,567 - INFO - Filtro aplicado nos relatos: {'titulo': 'Cabra'} - 1 resultados encontrados
+2025-06-10 23:00:33,568 - INFO - ROLLBACK
+2025-06-10 23:00:55,802 - ERROR - Erro ao filtrar testemunhas: type object 'Testemunha' has no attribute 'experiencia_prévia'
+2025-06-10 23:01:42,422 - INFO - BEGIN (implicit)
+2025-06-10 23:01:42,424 - INFO - SELECT testemunha.id, testemunha.nome, testemunha.idade, testemunha.credibilidade, testemunha.tipo_relacao, testemunha.experiencia_previa, testemunha.relato_id 
+FROM testemunha 
+WHERE (testemunha.nome LIKE '%%' || %(nome_1)s || '%%')
+2025-06-10 23:01:42,424 - INFO - [generated in 0.00020s] {'nome_1': 'Mariana'}
+2025-06-10 23:01:42,425 - INFO - Filtro aplicado em testemunhas: {'nome': 'Mariana'} - 1 resultados
+2025-06-10 23:01:42,426 - INFO - ROLLBACK
+2025-06-10 23:01:47,062 - ERROR - Erro ao filtrar testemunhas: type object 'Testemunha' has no attribute 'experiencia_prévia'
+2025-06-10 23:01:52,155 - INFO - BEGIN (implicit)
+2025-06-10 23:01:52,156 - INFO - SELECT testemunha.id, testemunha.nome, testemunha.idade, testemunha.credibilidade, testemunha.tipo_relacao, testemunha.experiencia_previa, testemunha.relato_id 
+FROM testemunha 
+WHERE (testemunha.nome LIKE '%%' || %(nome_1)s || '%%')
+2025-06-10 23:01:52,156 - INFO - [cached since 9.732s ago] {'nome_1': 'Mariana'}
+2025-06-10 23:01:52,156 - INFO - Filtro aplicado em testemunhas: {'nome': 'Mariana'} - 1 resultados
+2025-06-10 23:01:52,158 - INFO - ROLLBACK
+2025-06-10 23:02:00,372 - ERROR - Erro ao filtrar testemunhas: type object 'Testemunha' has no attribute 'experiencia_prévia'
+2025-06-10 23:02:04,269 - ERROR - Erro ao filtrar testemunhas: type object 'Testemunha' has no attribute 'experiencia_prévia'
+2025-06-10 23:02:07,564 - INFO - BEGIN (implicit)
+2025-06-10 23:02:07,565 - INFO - SELECT testemunha.id, testemunha.nome, testemunha.idade, testemunha.credibilidade, testemunha.tipo_relacao, testemunha.experiencia_previa, testemunha.relato_id 
+FROM testemunha
+2025-06-10 23:02:07,565 - INFO - [generated in 0.00019s] {}
+2025-06-10 23:02:07,566 - INFO - Filtro aplicado em testemunhas: {} - 5 resultados
+2025-06-10 23:02:07,567 - INFO - ROLLBACK
+2025-06-10 23:02:39,228 - INFO - BEGIN (implicit)
+2025-06-10 23:02:39,229 - INFO - SELECT registromultimidia.id, registromultimidia.tipo, registromultimidia.url, registromultimidia.data_registro, registromultimidia.legenda, registromultimidia.relato_id 
+FROM registromultimidia 
+ LIMIT %(param_1)s OFFSET %(param_2)s
+2025-06-10 23:02:39,229 - INFO - [generated in 0.00018s] {'param_1': 10, 'param_2': 0}
+2025-06-10 23:02:39,230 - INFO - Listagem paginada de registros: página 1, limite 10
+2025-06-10 23:02:39,232 - INFO - ROLLBACK
+2025-06-10 23:02:49,559 - INFO - BEGIN (implicit)
+2025-06-10 23:02:49,561 - INFO - SELECT registromultimidia.id, registromultimidia.tipo, registromultimidia.url, registromultimidia.data_registro, registromultimidia.legenda, registromultimidia.relato_id 
+FROM registromultimidia 
+WHERE (registromultimidia.tipo LIKE '%%' || %(tipo_1)s || '%%')
+2025-06-10 23:02:49,561 - INFO - [generated in 0.00030s] {'tipo_1': 'foto'}
+2025-06-10 23:02:49,562 - INFO - Filtro aplicado em registros: {'tipo': 'foto'} - 2 resultados
+2025-06-10 23:02:49,563 - INFO - ROLLBACK

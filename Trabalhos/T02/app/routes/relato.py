@@ -21,10 +21,33 @@ def criar_relato(relato: Relato, session: Session = Depends(get_session)):
         log_error(f"Erro ao criar relato: {e}")
         raise
 
+@router.get("/filtro", response_model=List[Relato])
+def filtrar_relatos(
+    titulo: str = None,
+    tipo_fenomeno: str = None,
+    localizacao: str = None,
+    session: Session = Depends(get_session)
+):
+    query = select(Relato)
+    filtros = {}
+    if titulo:
+        query = query.where(Relato.titulo.contains(titulo))
+        filtros["titulo"] = titulo
+    if tipo_fenomeno:
+        query = query.where(Relato.tipo_fenomeno.contains(tipo_fenomeno))
+        filtros["tipo_fenomeno"] = tipo_fenomeno
+    if localizacao:
+        query = query.where(Relato.localizacao.contains(localizacao))
+        filtros["localizacao"] = localizacao
+
+    resultados = session.exec(query).all()
+    log_info(f"Filtro aplicado nos relatos: {filtros} - {len(resultados)} resultados encontrados")
+    return resultados
+
 @router.get("/quantidade", response_model=dict)
 def contar_relatos(session: Session = Depends(get_session)):
     try:
-        quantidade = session.exec(select(Relato)).count()
+        quantidade = len(session.exec(select(Relato)).all())
         log_info(f"Quantidade de relatos: {quantidade}")
         return {"quantidade": quantidade}
     except Exception as e:
@@ -81,26 +104,3 @@ def deletar_relato(relato_id: int, session: Session = Depends(get_session)):
     session.commit()
     log_info(f"Relato deletado ID: {relato_id}")
     return {"ok": True, "mensagem": "Relato deletado com sucesso"}
-
-@router.get("/filtro", response_model=List[Relato])
-def filtrar_relatos(
-    titulo: str = None,
-    tipo_fenomeno: str = None,
-    localizacao: str = None,
-    session: Session = Depends(get_session)
-):
-    query = select(Relato)
-    filtros = {}
-    if titulo:
-        query = query.where(Relato.titulo.contains(titulo))
-        filtros["titulo"] = titulo
-    if tipo_fenomeno:
-        query = query.where(Relato.tipo_fenomeno.contains(tipo_fenomeno))
-        filtros["tipo_fenomeno"] = tipo_fenomeno
-    if localizacao:
-        query = query.where(Relato.localizacao.contains(localizacao))
-        filtros["localizacao"] = localizacao
-
-    resultados = session.exec(query).all()
-    log_info(f"Filtro aplicado nos relatos: {filtros} - {len(resultados)} resultados encontrados")
-    return resultados
