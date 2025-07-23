@@ -1,0 +1,67 @@
+2025-07-23 11:58:47,697 - INFO - Rota /eventos acessada
+2025-07-23 12:04:45,034 - INFO - Rota /eventos-filtro Acessada
+2025-07-23 12:04:45,034 - INFO - filtro gerado {filtro}
+2025-07-23 12:05:25,427 - INFO - Rota /eventos-filtro Acessada
+2025-07-23 12:05:25,427 - INFO - filtro gerado: 
+2025-07-23 12:25:56,411 - INFO - GET /eventos - Listando eventos paginados
+2025-07-23 12:25:56,411 - INFO - Paginação: página=1, limite=10, ordenação=nome ASC
+2025-07-23 12:25:56,424 - INFO - Eventos retornados: 5
+2025-07-23 12:26:13,577 - INFO - Total de artistas cadastrados: 9
+2025-07-23 12:26:27,222 - INFO - Artista recuperado: A3
+2025-07-23 12:26:36,795 - INFO - Categorias listadas com paginação: página 1, limite 10
+2025-07-23 15:30:16,694 - INFO - Locais listados com paginação: página=1, limite=10
+2025-07-23 15:30:34,909 - INFO - GET /eventos - Listando eventos paginados
+2025-07-23 15:30:34,910 - INFO - Paginação: página=1, limite=10, ordenação=data ASC
+2025-07-23 15:30:34,912 - INFO - Eventos retornados: 5
+2025-07-23 15:32:15,263 - INFO - Iniciando consulta de eventos com detalhes completos
+2025-07-23 15:32:15,277 - INFO - 5 eventos encontrados com detalhes
+2025-07-23 15:32:33,780 - INFO - Buscando resumo completo para evento: EV2
+2025-07-23 15:32:33,783 - INFO - Resumo do evento EV2 gerado com sucesso
+2025-07-23 15:32:59,825 - INFO - Iniciando agregação para encontrar locais mais utilizados
+2025-07-23 15:32:59,827 - INFO - 4 locais agregados
+2025-07-23 15:32:59,827 - INFO - Locais mais utilizados computados com sucesso: 4 locais
+2025-07-23 15:36:02,315 - INFO - Listagem paginada de ingressos: página 1, limite 10
+2025-07-23 15:36:40,261 - INFO - Listando todos os vínculos evento-artista.
+2025-07-23 15:37:43,085 - INFO - Consulta de ingressos com filtro: {'preco': {'$gte': 200.0}}
+2025-07-23 15:37:54,145 - INFO - Consulta de ingressos com filtro: {'preco': {'$gte': 200.0, '$lte': 700.0}}
+2025-07-23 15:38:09,090 - INFO - Consulta de ingressos com filtro: {'preco': {'$gte': 200.0, '$lte': 700.0}, 'data_emissao': datetime.datetime(2025, 7, 3, 0, 0)}
+2025-07-23 15:38:14,433 - INFO - Consulta de ingressos com filtro: {'preco': {'$gte': 200.0, '$lte': 700.0}, 'data_emissao': datetime.datetime(2025, 7, 6, 0, 0)}
+2025-07-23 15:38:20,163 - INFO - Consulta de ingressos com filtro: {'preco': {'$gte': 200.0, '$lte': 700.0}}
+2025-07-23 15:38:52,227 - INFO - Listando artistas vinculados ao evento EV2
+2025-07-23 15:39:32,282 - INFO - Total de artistas cadastrados: 9
+2025-07-23 15:39:57,315 - INFO - GET /eventos/filtro - Filtro solicitado
+2025-07-23 15:39:57,315 - INFO - Filtro aplicado: {'data': {'$gte': datetime.datetime(2025, 3, 12, 0, 0)}}
+2025-07-23 15:39:57,316 - INFO - Eventos encontrados: 5
+2025-07-23 15:40:09,985 - INFO - GET /eventos/filtro - Filtro solicitado
+2025-07-23 15:40:09,985 - INFO - Filtro aplicado: {'data': {'$gte': datetime.datetime(2025, 10, 12, 0, 0)}}
+2025-07-23 15:40:09,987 - INFO - Eventos encontrados: 1
+2025-07-23 15:40:46,715 - INFO - GET /eventos/filtro - Filtro solicitado
+2025-07-23 15:40:46,715 - INFO - Filtro aplicado: {'nome': {'$regex': 'Rock', '$options': 'i'}}
+2025-07-23 15:40:46,717 - INFO - Eventos encontrados: 1
+2025-07-23 15:45:37,045 - INFO - GET /eventos/filtro - Filtro solicitado
+2025-07-23 15:45:37,045 - INFO - Filtro aplicado: {'nome': {'$regex': 'Rock', '$options': 'i'}}
+2025-07-23 15:45:37,046 - INFO - Eventos encontrados: 1
+2025-07-23 15:45:44,260 - INFO - GET /eventos/filtro - Filtro solicitado
+2025-07-23 15:45:44,260 - INFO - Filtro aplicado: {'nome': {'$regex': 'R', '$options': 'i'}}
+2025-07-23 15:45:44,262 - INFO - Eventos encontrados: 5
+2025-07-23 15:46:01,818 - INFO - POST /eventos - Criando novo evento
+2025-07-23 15:46:01,822 - INFO - Evento criado com sucesso: string (EV10)
+2025-07-23 15:46:09,066 - INFO - GET /eventos - Listando eventos paginados
+2025-07-23 15:46:09,066 - INFO - Paginação: página=1, limite=10, ordenação=data ASC
+2025-07-23 15:46:09,068 - INFO - Eventos retornados: 6
+2025-07-23 15:46:24,033 - INFO - GET /eventos - Listando eventos paginados
+2025-07-23 15:46:24,033 - INFO - Paginação: página=1, limite=10, ordenação=nome ASC
+2025-07-23 15:46:24,035 - INFO - Eventos retornados: 6
+2025-07-23 15:46:37,862 - INFO - Total de artistas cadastrados: 9
+2025-07-23 15:47:04,833 - INFO - GET /eventos/filtro - Filtro solicitado
+2025-07-23 15:47:04,833 - INFO - Filtro aplicado: {'nome': {'$regex': 'R', '$options': 'i'}, 'data': {'$gte': datetime.datetime(2025, 10, 12, 0, 0)}}
+2025-07-23 15:47:04,835 - INFO - Eventos encontrados: 1
+2025-07-23 15:47:16,866 - INFO - Iniciando consulta de eventos com detalhes completos
+2025-07-23 15:47:16,883 - INFO - 6 eventos encontrados com detalhes
+2025-07-23 15:47:42,169 - INFO - Buscando resumo completo para evento: EV5
+2025-07-23 15:47:42,175 - INFO - Resumo do evento EV5 gerado com sucesso
+2025-07-23 15:47:48,945 - INFO - Buscando resumo completo para evento: EV2
+2025-07-23 15:47:48,956 - INFO - Resumo do evento EV2 gerado com sucesso
+2025-07-23 15:47:58,932 - INFO - Iniciando agregação para encontrar locais mais utilizados
+2025-07-23 15:47:58,935 - INFO - 5 locais agregados
+2025-07-23 15:47:58,936 - INFO - Locais mais utilizados computados com sucesso: 4 locais
